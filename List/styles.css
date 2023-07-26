@@ -1,0 +1,148 @@
+@charset "utf-8";
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-style: normal;
+  src: url(font/Roboto-Medium.woff) format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-style: normal;
+  src: url(font/Roboto-Medium.woff) format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-style: normal;
+  src: url(font/Roboto-Medium.woff) format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-weight: 900;
+  font-style: normal;
+  src: url(font/Roboto-Black.woff) format("woff");
+}
+@font-face {
+  font-family: "OpenSans";
+  font-weight: 400;
+  font-style: normal;
+  src: url(font/OpenSans-Regular.woff) format("woff");
+}
+@font-face {
+  font-family: "Yellowtail";
+  font-weight: 400;
+  font-style: normal;
+  src: url(font/Yellowtail-Regular.woff) format("woff");
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: Roboto;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+.wrap {
+  max-width: 1400px;
+  margin: 140px auto 140px;
+}
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.heading__title {
+  font-family: Yellowtail;
+  font-weight: 400;
+  font-size: 36px;
+  color: #7eb693;
+}
+.heading__name {
+  font-weight: 900;
+  font-size: 50px;
+  color: #274c5b;
+  line-height: 59px;
+}
+.heading__desc {
+  text-align: center;
+  font-family: OpenSans;
+  font-weight: 400;
+  font-size: 18px;
+  color: #525c60;
+  line-height: 30px;
+  width: 61%;
+}
+.content {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin-top: 42px;
+  gap: 27px;
+}
+.content__item {
+  background-color: #f9f8f8;
+  border-radius: 30px 30px 30px 30px;
+  transition: all 0.5s ease;
+}
+.content__item:hover {
+  cursor: pointer;
+  background-color: #fff;
+  box-shadow: 0px 29px 44px 0px #96969640;
+}
+.content__item-img {
+  width: 100%;
+  border-radius: 30px 30px 0 0;
+}
+.content__item-detail {
+  margin: 35px 28px;
+}
+.detail__title {
+  font-family: Roboto;
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 29px;
+  text-align: left;
+  color: #274c5b;
+}
+.detail__desc {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.detail__desc-position {
+  font-family: Yellowtail;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  color: #7eb693;
+}
+.detail__desc-follow {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
