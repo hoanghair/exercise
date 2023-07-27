@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Navigation Assignment</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -12,28 +12,44 @@
   <div class="wrap">
     <header class="header">
       <div class="header__left">
-        <h1 class="header__logo">
-          <a href="#" class="header__logo-link"><img src="img/img_logo.png" alt="" class="header__logo-img"></a>
+        <h1 class="logo">
+          <a href="#" class="logo__link"><img src="img/img_logo.png" alt="" class="logo__img"></a>
         </h1>
-        <nav class="header__nav">
-          <ul class="header__nav-list">
-            <li class="header__nav-item">Home</li>
-            <li class="header__nav-item">About</li>
-            <li class="header__nav-item header__nav-item--pages">Pages</li>
-            <li class="header__nav-item">Shop</li>
-            <li class="header__nav-item">Projects</li>
-            <li class="header__nav-item">News</li>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="" class="nav__item-link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__item-link">About</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__item-link nav__item--pages">Pages</a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__item-link">Shop</a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__item-link">Projects</a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__item-link">News</a>
+            </li>
           </ul>
         </nav>
       </div>
       <div class="header__right">
-        <div class="header__search">
-          <input type="text" class="header__search-input">
-          <span class="header__search-icon"></span>
+        <div class="search">
+          <input type="text" class="search__input">
+          <button type="button" class="bg__icon bg__icon--search">
+            <span class="icon icon--search"></span>
+          </button>
         </div>
-        <div class="header__card">
-          <span class="header__card-icon"></span>
-          <span class="header__card-number">Cart(0)</span>
+        <div class="car">
+          <button type="button" class="bg__icon bg__icon--cart">
+            <span class="icon icon--cart"></span>
+          </button>
+          <span class="car__number">Cart (0)</span>
         </div>
       </div>
     </header>
