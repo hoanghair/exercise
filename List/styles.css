@@ -1,46 +1,47 @@
 @charset "utf-8";
+
 @font-face {
   font-family: "Roboto";
   font-weight: 400;
   font-style: normal;
   src: url(font/Roboto-Regular.woff) format("woff");
 }
+
 @font-face {
   font-family: "Roboto";
   font-weight: 500;
   font-style: normal;
   src: url(font/Roboto-Medium.woff) format("woff");
 }
+
 @font-face {
   font-family: "Roboto";
   font-weight: 700;
   font-style: normal;
   src: url(font/Roboto-Bold.woff) format("woff");
 }
+
 @font-face {
   font-family: "Roboto";
   font-weight: 900;
   font-style: normal;
   src: url(font/Roboto-Black.woff) format("woff");
 }
+
 @font-face {
   font-family: "OpenSans";
   font-weight: 400;
   font-style: normal;
   src: url(font/OpenSans-Regular.woff) format("woff");
 }
+
 @font-face {
   font-family: "Yellowtail";
   font-weight: 400;
   font-style: normal;
   src: url(font/Yellowtail-Regular.woff) format("woff");
 }
-/* * {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-} */
+
 html,
 body,
 div,
@@ -54,7 +55,7 @@ h3,
 h4,
 h5,
 h6,
-ul, 
+ul,
 ol,
 li,
 p {
@@ -70,27 +71,31 @@ ul {
   list-style: none;
 }
 
-.wrap {
+.member {
   max-width: 1400px;
   margin: 140px auto 140px;
 }
+
 .heading {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .heading__title {
   font-family: Yellowtail;
   font-weight: 400;
   font-size: 36px;
   color: #7eb693;
 }
+
 .heading__name {
   font-weight: 900;
   font-size: 50px;
   color: #274c5b;
   line-height: 59px;
 }
+
 .heading__desc {
   text-align: center;
   font-family: OpenSans;
@@ -101,50 +106,61 @@ ul {
   line-height: 30px;
   width: 61%;
 }
-.content {
+
+.member__list {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
   margin-top: 42px;
-  gap: 43px 27px;
+  gap: 42px 27px;
 }
-.content__item {
+
+.member__item {
   background-color: #f9f8f8;
   border-radius: 30px 30px 30px 30px;
   transition: all 0.5s ease;
-  
 }
-.content__item:hover {
+
+.member__item:hover {
   cursor: pointer;
   background-color: #fff;
   box-shadow: 0px 29px 44px 0px #96969640;
 }
-.content__item-image{
-  width: 100%;
-  height: 484px;
+
+.member__thumb {
+  position: relative;
+  object-fit: cover;
+  padding-top: 108%;
 }
-.content__item-img {
+
+.member__thumb-img {
+  position: absolute;
+  display: block;
+  top: 0;
   width: 100%;
-  height: 100%;
   border-radius: 30px 30px 0 0;
 }
-.content__item-detail {
+
+.member__info {
   padding: 35px 28px;
 }
-.detail__title {
+
+.member__name {
   font-family: Roboto;
+  text-align: left;
   font-size: 25px;
   font-weight: 800;
   line-height: 29px;
-  text-align: left;
   color: #274c5b;
 }
-.detail__desc {
+
+.member__desc {
   display: flex;
   justify-content: space-between;
   align-items: end;
   margin-top: 2px;
 }
-.detail__desc-position {
+
+.member__business {
   font-family: Yellowtail;
   font-size: 22px;
   font-weight: 400;
@@ -152,11 +168,34 @@ ul {
   text-align: left;
   color: #7eb693;
 }
-.detail__desc-follow {
+
+.member__sns {
   display: flex;
   align-items: center;
   gap: 16px;
 }
-.detail__desc-follow img {
+
+.icon {
   display: block;
+  background-image: url('img/list_icon.png');
+  background-repeat: no-repeat;
+  /* vertical-align: middle; */
+}
+
+.icon--facebook {
+  width: 23px;
+  height: 22px;
+  background-position: -2px -2px;
+}
+
+.icon--instagram {
+  width: 23px;
+  height: 22px;
+  background-position: -26px -2px;
+}
+
+.icon--twitter {
+  width: 25px;
+  height: 20px;
+  background-position: -52px -2px;
 }
