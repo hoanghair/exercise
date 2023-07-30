@@ -28,13 +28,6 @@
   src: url(font/Roboto-Black.woff) format("woff");
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-}
-
 html,
 body,
 div,
@@ -61,6 +54,12 @@ ul {
   list-style: none;
 }
 
+button,
+input {
+  border: 0;
+  background: transparent;
+}
+
 .member {
   max-width: 1184px;
   margin: 140px auto 140px;
@@ -83,29 +82,31 @@ ul {
   font-size: 18px;
   font-weight: 700;
   line-height: 21px;
-  color: #274C5B;
+  color: #274c5b;
 }
 
 .member__form-input {
-  display: flex;  
+  display: flex;
   box-sizing: border-box;
+  outline: none;
   width: 100%;
   height: 80px;
   margin-top: 26px;
   border-radius: 16px;
   padding: 0 23px;
-  border: 1px solid #7EB693;
+  border: 1px solid #7eb693;
 }
-::placeholder{
+::placeholder {
   font-family: Roboto;
-  font-weight: 400;
   font-style: italic;
+  font-weight: 400;
   font-size: 18px;
   line-height: 21px;
-  color: #ABABAB;
+  color: #ababab;
 }
 .form__submit {
   font-family: Roboto;
+  cursor: pointer;
   color: #fff;
   width: 220px;
   height: 80px;
@@ -114,9 +115,9 @@ ul {
   font-size: 20px;
   line-height: 23px;
   border-radius: 16px;
-  background-color: #274C5B;
+  background-color: #274c5b;
 }
-.member__form-input--message{
+.member__form-input--message {
   padding-top: 28px;
   height: 247px;
 }
