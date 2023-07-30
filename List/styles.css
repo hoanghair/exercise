@@ -102,9 +102,9 @@ ul {
   font-weight: 400;
   font-size: 18px;
   margin-top: 16px;
-  color: #525c60;
   line-height: 30px;
   width: 61%;
+  color: #525c60;
 }
 
 .member__list {
@@ -177,9 +177,8 @@ ul {
 
 .icon {
   display: block;
-  background-image: url('img/list_icon.png');
+  background-image: url("img/list_icon.png");
   background-repeat: no-repeat;
-  /* vertical-align: middle; */
 }
 
 .icon--facebook {
