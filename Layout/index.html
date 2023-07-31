@@ -1,14 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Layout, Responsive Assignment</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <div class="wrap">
-    babbaba
+    <header class="header">
+      <div class="header__logo">
+        <a href="#">Castpress.</a>
+      </div>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item nav__item--episodes">
+            <button class="episodes">Episodes</button>
+            <ul class="episodes__list">
+              <li class="episodes__item"><a href="#" class="episodes__link">Season 1</a></li>
+              <li class="episodes__item"><a href="#" class="episodes__link">Season 2</a></li>
+              <li class="episodes__item"><a href="#" class="episodes__link">Season 3</a></li>
+            </ul>
+          </li>
+          <li class="nav__item"><a href="#" class="nav__link">Blog</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+          <li class="nav__item nav__item--heart"><a href="#" class="nav__link">Donate</a></li>
+          <li class="nav__item nav__item--search"><button class="icon--search"></button></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="content">
+      <section class="slider">
+        <div class="slider__image">
+          <img src="img/img__item1.png" alt="">
+        </div>
+        <h3 class="slider__title">How to rapidly test any experience!</h3>
+        <div class="slider__">
+
+        </div>
+        <div class="slider__channels">
+          <span class="slider__title">Listen on</span>
+          <ul class="channels__list">
+            <li class="channels__item channels__item--spotify"><a href="#" class="channels__link"></a></li>
+            <li class="channels__item channels__item--soundcloud"><a href="#" class="channels__link"></a></li>
+            <li class="channels__item channels__item--apple"><a href="#" class="channels__link"></a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="episodes">
+        <div class="episodes__item">
+          <div class="episodes__">
+
+          </div>
+          <h2 class="episodes__title">23 - How to rapidly test any experience!</h2>
+          <p class="episodes__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,
+            consect adipiscing elit. Sed at
+            arcu dui. Aenean placerat mauris nisl...</p>
+          <button class="episodes__btn"><span class="episodes__btn-name">listen now</span></button>
+        </div>
+
+        <div class="episodes__pagination">
+          <a href="#">&laquo;</a>
+          <a href="#">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a href="#">5</a>
+          <a href="#">6</a>
+          <a href="#">&raquo;</a>
+        </div>
+      </section>
+      <section class="team">
+        <h2 class="team__title">Team</h2>
+        <div class="team__list">
+          <div class="team__item">
+            <div class="team__thumb">
+              <img src="img/img__team1.png" alt="">
+            </div>
+            <div class="team__info">
+              <span class="info__position">Position</span>
+              <strong class="info__name">Aida Cave</strong>
+              <ul class="team__sns">
+                <li class="team__sns-item"><a href="#" class="team__sns-link"></a></li>
+                <li class="team__sns-item"><a href="#" class="team__sns-link"></a></li>
+                <li class="team__sns-item"><a href="#" class="team__sns-link"></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="team__item">
+            <div class="team__thumb">
+              <img src="img/img__team2.png" alt="">
+            </div>
+            <div class="team__info">
+              <span class="info__position">Position</span>
+              <strong class="info__name">Nick Carleton</strong>
+              <ul class="team__sns">
+                <li class="team__sns-item"><a href="#" class="team__sns-link"></a></li>
+                <li class="team__sns-item"><a href="#" class="team__sns-link"></a></li>
+                <li class="team__sns-item"><a href="#" class="team__sns-link"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="posts">
+        <h2 class="posts__title">Latest Posts</h2>
+        <div class="posts__list">
+          <div class="posts__item">
+            <div class="posts__thumb">
+              <img src="img/img__item2.png" alt="">
+            </div>
+            <div class="posts__desc">
+              <strong class="posts__desc-title">How to create your own podcast cover art?</strong>
+              <span class="posts__desc-date">Dec 4, 2019</span>
+              <a href="#" class="posts__desc-more">Read More</a>
+            </div>
+          </div>
+          <div class="posts__item">
+            <div class="posts__thumb">
+              <img src="img/img__item3.png" alt="">
+            </div>
+            <div class="posts__desc">
+              <strong class="posts__desc-title">How to create your own podcast cover art?</strong>
+              <span class="posts__desc-date">Dec 4, 2019</span>
+              <a href="#" class="posts__desc-more">Read More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="posts__view">
+          <a href="#" class="posts__view-link">View Blog</a>
+        </div>
+      </section>
+    </div>
+    <div class="footer">
+
+    </div>
   </div>
 </body>
+
 </html>
