@@ -53,13 +53,23 @@ a {
 }
 
 button,
-input, table {
+input,
+table {
   border: 0;
   background: transparent;
 }
 
 body {
   background-color: #f1f5f9;
+}
+.blind {
+  overflow: hidden;
+  position: absolute;
+  padding: 0 !important;
+  width: 1px !important;
+  height: 1px !important;
+  line-height: 1px !important;
+  clip: rect(1px, 1px, 1px, 1px);
 }
 
 .wrap {
@@ -90,12 +100,12 @@ body {
   line-height: 24px;
   text-align: right;
 }
-.type-dashboard{
-  color: #64748B;
+.type-dashboard {
+  color: #64748b;
   padding-right: 5px;
 }
-.type-table{
-  color: #3C50E0;
+.type-table {
+  color: #3c50e0;
   padding-left: 5px;
 }
 
@@ -126,7 +136,6 @@ thead th {
   background-color: #f7f9fc;
   color: #64748b;
 }
-
 
 thead th:first-child {
   padding-left: 20px;
@@ -159,7 +168,7 @@ th:first-child {
 }
 tbody th {
   border: 0;
-  border-bottom: 1px solid #E2E8F0;
+  border-bottom: 1px solid #e2e8f0;
 }
 tbody td {
   text-align: center;
@@ -167,7 +176,7 @@ tbody td {
   font-weight: 500;
   line-height: 24px;
   padding: 26px 0;
-  border-bottom: 1px solid #E2E8F0;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 tbody td:nth-child(3) {
@@ -177,7 +186,7 @@ tbody td:nth-child(3) {
 tbody td:nth-child(5) {
   color: #259ae6;
 }
-.table__row{
+.table__row {
   display: flex;
   align-items: center;
 }
