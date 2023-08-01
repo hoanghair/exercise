@@ -35,6 +35,9 @@ h4,
 h5,
 h6,
 p,
+ul,
+li,
+a,
 button {
   margin: 0;
   padding: 0;
@@ -48,6 +51,200 @@ ul {
   list-style: none;
 }
 
+button {
+  background: transparent;
+}
+
 a {
   text-decoration: none;
+  color: #000;
+}
+
+.wrap {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  height: 106px;
+  width: 79.166667%;
+  border-bottom: 1px solid #eaeaee;
+}
+
+.header__logo a {
+  font-family: Oswald;
+  text-align: left;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.05em;
+}
+
+.nav {
+}
+
+.nav__list {
+  display: flex;
+  gap: 23px;
+}
+.nav__item {
+  font-size: 0;
+}
+
+.nav__item a,
+.nav__item button {
+  text-transform: uppercase;
+  text-align: left;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 15px;
+  letter-spacing: 0.16em;
+  color: #222222;
+  transition: all 0.4s ease;
+}
+.nav__item a:hover,
+.nav__item button:hover,
+.nav__item--episodes:hover .episodes {
+  color: #7247ca;
+}
+.nav__item a:hover .icon--heart {
+  background-position: -12px -2px;
+}
+.nav__item a {
+  padding: 5px 10px;
+}
+.episodes {
+  position: relative;
+  display: inline-block;
+}
+.episodes__list {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.episodes__item {
+  padding: 5px 10px;
+}
+.nav__item .episodes__link {
+  text-transform: lowercase;
+  color: #979797;
+}
+.nav__item--episodes:hover .episodes__list {
+  display: block;
+}
+
+.icon-nav {
+  display: inline-block;
+  background-image: url("img/list_icon_nav.png");
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+
+.icon--search {
+  width: 16px;
+  height: 16px;
+  background-position: -27px -2px;
+}
+
+.icon--heart {
+  width: 13px;
+  height: 12px;
+  background-position: -63px -2px;
+}
+
+.icon--down {
+  width: 8px;
+  height: 5px;
+  background-position: -2px -2px;
+  margin-left: 8px;
+}
+
+.content {
+  margin: 96px auto 0;
+  width: 46.527778%;
+}
+.slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.slider__image {
+  width: 180px;
+  height: 180px;
+}
+.slider__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.slider__title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 32px;
+  margin-top: 39px;
+}
+.slider__player {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 39px;
+}
+.icon-slider {
+  display: inline-block;
+  background-image: url("img/list_music.png");
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+.player__time {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: 0.16em;
+  padding: 0px 9px;
+  color: #555;
+}
+.player__bar {
+  /* width: 67%;
+  height: 7px;
+  background: #F5F5F7; */
+  width: 100%;
+  margin-top: 1em;
+  height: 10px;
+  background: #e0e5ec;
+  border-radius: 2em;
+  border: 0;
+}
+.player__bar-on {
+  width: 42%;
+  height: 100%;
+  background: #7e8a98;
+  opacity: 0.75;
+  border-radius: 15px;
+}
+.icon--play {
+  width: 15px;
+  height: 16px;
+  background-position: -2px -2px;
+}
+.icon--volume {
+  width: 16px;
+  height: 14px;
+  background-position: -19px -2px;
+  margin-right: 16px;
+}
+
+.icon--download {
+  width: 13px;
+  height: 14px;
+  background-position: -37px -2px;
 }

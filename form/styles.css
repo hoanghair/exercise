@@ -60,23 +60,23 @@ input {
   background: transparent;
 }
 
-.member {
+.wrap {
   max-width: 1184px;
   margin: 140px auto 140px;
 }
 
-.member__form {
+.wrap__form {
   display: grid;
   grid-template-columns: auto auto;
   gap: 50px;
 }
 
-.member__form-message {
+.wrap__form-message {
   grid-column-start: 1;
   grid-column-end: 3;
 }
 
-.member__form-title {
+.form__title {
   display: flex;
   text-align: left;
   font-size: 18px;
@@ -85,7 +85,7 @@ input {
   color: #274c5b;
 }
 
-.member__form-input {
+.form__input {
   display: flex;
   box-sizing: border-box;
   outline: none;
@@ -117,7 +117,7 @@ input {
   border-radius: 16px;
   background-color: #274c5b;
 }
-.member__form-input--message {
+.form__input--message {
   padding-top: 28px;
   height: 247px;
 }
