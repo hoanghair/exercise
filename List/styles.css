@@ -70,8 +70,17 @@ ol,
 ul {
   list-style: none;
 }
+.blind {
+  overflow: hidden;
+  position: absolute;
+  padding: 0 !important;
+  width: 1px !important;
+  height: 1px !important;
+  line-height: 1px !important;
+  clip: rect(1px, 1px, 1px, 1px);
+}
 
-.member {
+.wrap {
   max-width: 1400px;
   margin: 140px auto 140px;
 }

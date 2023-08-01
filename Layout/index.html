@@ -13,11 +13,11 @@
     <header class="header">
       <div class="header__logo">
         <a href="#">Castpress.</a>
-      </div>
+      </div>  
       <nav class="nav">
         <ul class="nav__list">
           <li class="nav__item nav__item--episodes">
-            <button class="episodes">Episodes</button>
+            <button class="episodes">Episodes<span class="icon-nav icon--down"></span></button>
             <ul class="episodes__list">
               <li class="episodes__item"><a href="#" class="episodes__link">Season 1</a></li>
               <li class="episodes__item"><a href="#" class="episodes__link">Season 2</a></li>
@@ -26,8 +26,8 @@
           </li>
           <li class="nav__item"><a href="#" class="nav__link">Blog</a></li>
           <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
-          <li class="nav__item nav__item--heart"><a href="#" class="nav__link">Donate</a></li>
-          <li class="nav__item nav__item--search"><button class="icon--search"></button></li>
+          <li class="nav__item nav__item--heart"><a href="#" class="nav__link"><span class="icon-nav icon--heart"></span> Donate</a></li>
+          <li class="nav__item nav__item--search"><button class="icon-nav icon--search"></button></li>
         </ul>
       </nav>
     </header>
@@ -37,11 +37,18 @@
           <img src="img/img__item1.png" alt="">
         </div>
         <h3 class="slider__title">How to rapidly test any experience!</h3>
-        <div class="slider__">
-
+        <div class="slider__player">
+          <button class="icon-slider icon--play"></button>
+          <span class="player__time player__time--current">00:00</span>
+          <div class="player__bar">
+            <div class="player__bar-on"></div>
+          </div>
+          <span class="player__time player__time--total">02:45</span>
+          <button class="icon-slider icon--volume"></button>
+          <button class="icon-slider icon--download"></button>
         </div>
         <div class="slider__channels">
-          <span class="slider__title">Listen on</span>
+          <span class="channels__title">Listen on</span>
           <ul class="channels__list">
             <li class="channels__item channels__item--spotify"><a href="#" class="channels__link"></a></li>
             <li class="channels__item channels__item--soundcloud"><a href="#" class="channels__link"></a></li>
@@ -95,7 +102,7 @@
             </div>
             <div class="team__info">
               <span class="info__position">Position</span>
-              <strong class="info__name">Nick Carleton</strong>
+              <strong class="info__name">Nick cartleton</strong>
               <ul class="team__sns">
                 <li class="team__sns-item"><a href="#" class="team__sns-link"></a></li>
                 <li class="team__sns-item"><a href="#" class="team__sns-link"></a></li>
