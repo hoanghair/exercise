@@ -127,8 +127,8 @@ input {
   right: 0;
   width: 6px;
   height: 3px;
-  transform: translateY(-50%);
   background: url(img/ico_down.png) no-repeat center/cover;
+  transform: translateY(-50%);
   content: "";
 }
 
