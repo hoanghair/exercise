@@ -91,8 +91,8 @@ body {
   font-size: 26px;
   font-weight: 700;
   line-height: 30px;
-  text-align: left;
   color: #1c2434;
+  text-align: left;
 }
 .table__heading-type span {
   font-size: 16px;
@@ -101,40 +101,40 @@ body {
   text-align: right;
 }
 .type-dashboard {
-  color: #64748b;
   padding-right: 5px;
+  color: #64748b;
 }
 .type-table {
-  color: #3c50e0;
   padding-left: 5px;
+  color: #3c50e0;
 }
 
 table {
   width: 100%;
-  padding: 0 20px 0 20px;
   margin-top: 40px;
-  background: #fff;
+  padding: 0 20px 0 20px;
   border-spacing: 0;
+  background: #fff;
   box-shadow: 0px 8px 13px -3px #00000012;
 }
 
 .table__name {
-  text-align: left;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 26px;
-  color: #212b36;
   padding: 25px 35px;
   background-color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  color: #212b36;
+  text-align: left;
 }
 thead th {
-  text-align: center;
+  padding: 19px 0 22px 0;
+  background-color: #f7f9fc;
   font-size: 14px;
   font-weight: 500;
   line-height: 22px;
-  padding: 19px 0 22px 0;
-  background-color: #f7f9fc;
   color: #64748b;
+  text-align: center;
 }
 
 thead th:first-child {
@@ -163,20 +163,20 @@ thead th:nth-child(5) {
 }
 
 th:first-child {
-  text-align: left;
   padding: 14px 0 14px 18px;
+  text-align: left;
 }
 tbody th {
   border: 0;
   border-bottom: 1px solid #e2e8f0;
 }
 tbody td {
-  text-align: center;
+  padding: 26px 0;
+  border-bottom: 1px solid #e2e8f0;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
-  padding: 26px 0;
-  border-bottom: 1px solid #e2e8f0;
+  text-align: center;
 }
 
 tbody td:nth-child(3) {
@@ -191,19 +191,19 @@ tbody td:nth-child(5) {
   align-items: center;
 }
 .row__name {
-  text-align: left;
+  padding-left: 13px;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
-  padding-left: 13px;
+  text-align: left;
   color: #1c2434;
 }
 .icon {
   display: block;
-  background-image: url("img/list_icon.png");
-  background-repeat: no-repeat;
   width: 48px;
   height: 48px;
+  background-image: url("img/list_icon.png");
+  background-repeat: no-repeat;
 }
 .icon--google {
   background-position: -2px -102px;
