@@ -17,7 +17,10 @@
       <nav class="nav">
         <ul class="nav__list">
           <li class="nav__item nav__item--episodes">
-            <button class="nav__episodes-title">Episodes<span class="icon-nav icon--down"></span></button>
+            <button class="nav__episodes-title nav__link">
+              <span>Episodes</span>
+              <span class="icon-nav icon--down"></span>
+            </button>
             <ul class="nav__episodes-list">
               <li class="nav__episodes-item"><a href="#" class="nav__episodes-link">Season 1</a></li>
               <li class="nav__episodes-item"><a href="#" class="nav__episodes-link">Season 2</a></li>
@@ -26,8 +29,12 @@
           </li>
           <li class="nav__item"><a href="#" class="nav__link">Blog</a></li>
           <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
-          <li class="nav__item nav__item--heart"><a href="#" class="nav__link"><span
-                class="icon-nav icon--heart"></span>Donate</a></li>
+          <li class="nav__item nav__item--heart">
+            <a href="#" class="nav__link">
+              <span class="icon-nav icon--heart"></span>
+              <span>Donate</span>
+            </a>
+          </li>
           <li class="nav__item nav__item--search"><button class="icon-nav icon--search"></button></li>
         </ul>
       </nav>
@@ -115,7 +122,7 @@
           <a href="#" class="pagination__link">1</a>
           <a href="#" class="pagination__link">2</a>
           <a href="#" class="pagination__link">3</a>
-          <a href="#" class="pagination__link">...</a>
+          <a href="#" class="pagination__link pagination__link--more">&#46;&#46;&#46;</a>
           <a href="#" class="pagination__link pagination__link--next"><span class="icon-nav icon--next"><span
                 class="blind">next</span></span></a>
         </div>
@@ -146,7 +153,7 @@
             </div>
             <div class="member__info">
               <span class="info__position">Position</span>
-              <strong class="info__name">Nick cartleton</strong>
+              <strong class="info__name">Nick Carleton</strong>
               <ul class="member__sns">
                 <li class="sns-item"><a href="#" class="icon-sns icon--linkedin"><span class="blind">linkedin</span></a>
                 </li>
@@ -164,7 +171,7 @@
         <div class="posts__list">
           <div class="posts__item">
             <div class="posts__thumb">
-              <img src="img/img__item2.png" alt="">
+              <img src="img/img__item2.png" alt="clock">
             </div>
             <div class="posts__desc">
               <strong class="posts__desc-title">How to create your own podcast cover art?</strong>
@@ -174,7 +181,7 @@
           </div>
           <div class="posts__item">
             <div class="posts__thumb">
-              <img src="img/img__item3.png" alt="">
+              <img src="img/img__item3.png" alt="headphone">
             </div>
             <div class="posts__desc">
               <strong class="posts__desc-title">How to create your own podcast cover art?</strong>
@@ -202,18 +209,18 @@
           <span class="footer__desc">Sign up now; get closer to our action.</span>
           <div class="footer__input">
             <input type="text" id="gmail" name="gmail" class="input-gmail" placeholder="Email adress...">
-            <a href="#" class="btn-send"></a>
+            <a href="#" class="btn-send"><span class="blind">send gmail</span></a>
           </div>
         </div>
       </div>
       <div class="footer__policy">
-        <span class="footer__policy-desc">PodcastTheme by VitaThemes &#124; Privacy policy</span>
+        <span class="footer__policy-desc">PodcastTheme By VitaThemes &#124; Privacy Policy</span>
         <ul class="footer__sns">
-          <li class="sns-item"><a href="#" class="icon-sns icon--linkedin"><span class="blind">linkedin</span></a>
+          <li class="footer__sns-item"><a href="#" class="footer__icon footer__icon--facebook"><span class="blind">facebook</span></a>
           </li>
-          <li class="sns-item"><a href="#" class="icon-sns icon--github"><span class="blind">github</span></a>
+          <li class="footer__sns-item"><a href="#" class="footer__icon footer__icon--github"><span class="blind">github</span></a>
           </li>
-          <li class="sns-item"><a href="#" class="icon-sns icon--twitter"><span class="blind">twitter</span></a>
+          <li class="footer__sns-item"><a href="#" class="footer__icon footer__icon--twitter"><span class="blind">twitter</span></a>
           </li>
         </ul>
       </div>
