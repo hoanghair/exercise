@@ -52,7 +52,7 @@ iframe,
 h1,
 h2,
 h3,
-h4,
+span,
 h5,
 h6,
 ul,
@@ -70,6 +70,7 @@ ol,
 ul {
   list-style: none;
 }
+
 .blind {
   overflow: hidden;
   position: absolute;
@@ -130,9 +131,6 @@ ul {
   background-color: #f9f8f8;
   transition: box-shadow 0.5s ease;
 }
-.member__item:nth-last-child(-n + 3) {
-  margin-bottom: 0;
-}
 
 .member__item:hover {
   background-color: #fff;
@@ -188,6 +186,7 @@ ul {
   display: flex;
   align-items: center;
 }
+
 .member__sns-item + .member__sns-item {
   margin-left: 16px;
 }
@@ -216,20 +215,26 @@ ul {
   background-position: -52px -2px;
 }
 
-@media screen and (min-width: 360px) and (max-width: 1024px) {
+@media screen and (min-width: 1025px) {
+  .member__item:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
   .member__item {
     width: calc(50% - (27px / 2));
-  }
-  .member__item:nth-last-child(-n + 3) {
-    margin-bottom: 42px;
   }
   .member__item:nth-last-child(-n + 2) {
     margin-bottom: 0;
   }
 }
 
-@media only screen and (max-width: 675px) {
+@media only screen and (max-width: 768px) {
   .member__item {
     width: 100%;
+  }
+  .member__item:nth-last-child(-n + 1) {
+    margin-bottom: 0;
   }
 }

@@ -9,23 +9,9 @@
 
 @font-face {
   font-family: "Roboto";
-  font-weight: 500;
-  font-style: normal;
-  src: url(font/Roboto-Medium.woff) format("woff");
-}
-
-@font-face {
-  font-family: "Roboto";
   font-weight: 700;
   font-style: normal;
   src: url(font/Roboto-Bold.woff) format("woff");
-}
-
-@font-face {
-  font-family: "Roboto";
-  font-weight: 900;
-  font-style: normal;
-  src: url(font/Roboto-Black.woff) format("woff");
 }
 
 html,
@@ -63,17 +49,13 @@ input {
 .wrap {
   max-width: 1184px;
   margin: 140px auto 140px;
+  padding: 0 60px;
 }
 
 .form {
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 50px;
-}
-
-.form__message {
-  grid-column-start: 1;
-  grid-column-end: 3;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .form__title {
@@ -83,6 +65,15 @@ input {
   line-height: 21px;
   color: #274c5b;
   text-align: left;
+}
+
+.form__item {
+  width: calc(50% - 25px);
+  margin-bottom: 50px;
+}
+
+.form__message {
+  width: 100%;
 }
 
 .form__input {
@@ -96,6 +87,7 @@ input {
   outline: none;
   box-sizing: border-box;
 }
+
 ::placeholder {
   font-family: Roboto;
   font-size: 18px;
@@ -104,6 +96,12 @@ input {
   font-style: italic;
   color: #ababab;
 }
+
+.form__input--message {
+  height: 247px;
+  padding-top: 28px;
+}
+
 .form__submit {
   width: 220px;
   height: 80px;
@@ -117,7 +115,30 @@ input {
   color: #fff;
   cursor: pointer;
 }
-.form__input--message {
-  height: 247px;
-  padding-top: 28px;
+
+@media screen and (min-width: 768px) {
+  .form__item:nth-child(even) {
+    margin-left: 50px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .form__item {
+    width: 100%;
+  }
+  .form__input {
+    height: 60px;
+    padding: 0 12px;
+  }
+  .form__input--message {
+    height: 100px;
+    padding-top: 12px;
+  }
+  ::placeholder {
+    font-size: 16px;
+  }
+  .form__submit {
+    width: 200px;
+    height: 60px;
+  }
 }
