@@ -6,14 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Layout, Responsive Assignment</title>
   <link rel="stylesheet" href="styles.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 
 <body>
   <div class="wrap">
+    <!-- header -->
     <header class="header">
-      <div class="header__logo">
+      <!-- header logo -->
+      <div class="logo">
         <a href="#">CastPress.</a>
       </div>
+      <!-- // header logo -->
+
+      <!-- header menu -->
+      <div class="menu only-mo">
+        <button class="btn__menu btn__menu-on"></button>
+      </div>
+      <!-- // header menu -->
+
+      <!-- nav-->
       <nav class="nav">
         <ul class="nav__list">
           <li class="nav__item nav__item--episodes">
@@ -46,8 +58,13 @@
           </li>
         </ul>
       </nav>
+      <!-- // nav -->
     </header>
+    <!-- // header -->
+
+    <!-- content -->
     <div class="content">
+      <!-- slider -->
       <section class="slider">
         <div class="slider__image">
           <img src="img/img__item1.png" alt="" />
@@ -84,6 +101,9 @@
           </ul>
         </div>
       </section>
+      <!-- // slider -->
+
+      <!-- episodes  -->
       <section class="episodes">
         <div class="episodes__item">
           <div class="episodes__tags">
@@ -93,18 +113,20 @@
               <span class="episodes__time">Jan 18, 2021</span>
             </div>
           </div>
-          <h3 class="episodes__title only-pc">
-            23 - How to rapidly test any experience!
-          </h3>
-          <h3 class="episodes__title only-mo">23 - Makemeup Podcast Theme</h3>
-          <p class="episodes__desc only-pc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
-            ipsum dolor sit amet, consect adipiscing elit. Sed at arcu dui.
-            Aenean placerat mauris nisl...
-          </p>
-          <p class="episodes__desc only-mo">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet...
-          </p>
+          <div class="title-wrap">
+            <h3 class="episodes__title only-pc">23 - How to rapidly test any experience!</h3>
+            <h3 class="episodes__title only-mo">23 - Makemeup Podcast Theme</h3>
+          </div>
+          <div class="desc-wrap">
+            <p class="episodes__desc only-pc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
+              ipsum dolor sit amet, consect adipiscing elit. Sed at arcu dui.
+              Aenean placerat mauris nisl...
+            </p>
+            <p class="episodes__desc only-mo">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet...
+            </p>
+          </div>
           <a href="#" class="episodes__btn episodes__btn--first">
             <span class="icon--play2"><span class="blind">play</span></span>
             <span class="btn-title">listen now</span>
@@ -114,24 +136,30 @@
         <div class="episodes__item">
           <div class="episodes__tags">
             <div class="episodes__date">
-              <span class="episodes__category only-pc">Business</span>
-              <span class="episodes__category only-mo">Education</span>
+              <div class="category-wrap">
+                <span class="episodes__category only-pc">Business</span>
+                <span class="episodes__category only-mo">Education</span>
+              </div>
               <span class="episodes__time">Jan 18, 2021</span>
             </div>
           </div>
-          <h3 class="episodes__title only-pc">
-            22 - Everything you need to know about mind mapping creation
-          </h3>
-          <h3 class="episodes__title only-mo">
-            22 - Makemeup Podcast Theme; launch an audio podcast website
-          </h3>
-          <p class="episodes__desc only-pc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
-            ipsum dolor sit amet, consect adipiscing elit...
-          </p>
-          <p class="episodes__desc only-mo">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at arcu dui. Aenean placerat mauris nisl...
-          </p>
+          <div class="title-wrap">
+            <h3 class="episodes__title only-pc">
+              22 - Everything you need to know about mind mapping creation
+            </h3>
+            <h3 class="episodes__title only-mo">
+              22 - Makemeup Podcast Theme; launch an audio podcast website
+            </h3>
+          </div>
+          <div class="desc-wrap">
+            <p class="episodes__desc only-pc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
+              ipsum dolor sit amet, consect adipiscing elit...
+            </p>
+            <p class="episodes__desc only-mo">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at arcu dui. Aenean placerat mauris nisl...
+            </p>
+          </div>
           <a href="#" class="episodes__btn">
             <span class="icon--play2"><span class="blind">play</span></span>
             <span class="btn-title">listen now</span>
@@ -141,21 +169,25 @@
         <div class="episodes__item">
           <div class="episodes__tags">
             <div class="episodes__date">
-              <span class="episodes__category only-pc">Business</span>
-              <span class="episodes__category only-mo">Market</span>
+              <div class="category-wrap">
+                <span class="episodes__category only-pc">Business</span>
+                <span class="episodes__category only-mo">Market</span>
+              </div>
               <span class="episodes__time">Jan 18, 2021</span>
             </div>
           </div>
           <h3 class="episodes__title">
             21 - Makemeup Podcast Theme; launch it now !
           </h3>
-          <p class="episodes__desc only-pc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
-            ipsum dolor sit amet, consect adipiscing elit...
-          </p>
-          <p class="episodes__desc only-mo">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet...
-          </p>
+          <div class="desc-wrap">
+            <p class="episodes__desc only-pc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
+              ipsum dolor sit amet, consect adipiscing elit...
+            </p>
+            <p class="episodes__desc only-mo">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet...
+            </p>
+          </div>
           <a href="#" class="episodes__btn">
             <span class="icon--play2"><span class="blind">play</span></span>
             <span class="btn-title">listen now</span>
@@ -171,6 +203,9 @@
                 class="blind">next</span></span></a>
         </div>
       </section>
+      <!-- // episodes -->
+
+      <!-- member -->
       <section class="member">
         <h2 class="member__title">Team</h2>
         <div class="member__list">
@@ -216,6 +251,9 @@
           </div>
         </div>
       </section>
+      <!-- // member -->
+
+      <!-- posts -->
       <section class="posts">
         <h2 class="posts__title">Latest Posts</h2>
         <div class="posts__list">
@@ -245,7 +283,12 @@
           <a href="#" class="posts__view-link">View Blog</a>
         </div>
       </section>
+      <!-- // posts -->
+
     </div>
+    <!-- // content -->
+
+    <!-- footer -->
     <div class="footer content">
       <div class="footer__container">
         <ul class="footer__nav">
@@ -286,7 +329,11 @@
         </ul>
       </div>
     </div>
+    <!-- // footer -->
+
   </div>
+
+  <script src="index.js"></script>
 </body>
 
 </html>
