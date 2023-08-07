@@ -131,7 +131,7 @@ input {
     padding: 0 12px;
   }
   .form__input--message {
-    height: 100px;
+    height: 150px;
     padding-top: 12px;
   }
   ::placeholder {
