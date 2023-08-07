@@ -79,7 +79,7 @@ input {
 }
 
 .logo {
-  width: 198px;
+  flex: 0 0 198px;
   height: 53px;
 }
 

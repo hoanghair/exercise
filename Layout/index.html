@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Layout, Responsive Assignment</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
@@ -22,9 +22,15 @@
               <span class="icon-nav icon--down"></span>
             </button>
             <ul class="nav__episodes-list">
-              <li class="nav__episodes-item"><a href="#" class="nav__episodes-link">Season 1</a></li>
-              <li class="nav__episodes-item"><a href="#" class="nav__episodes-link">Season 2</a></li>
-              <li class="nav__episodes-item"><a href="#" class="nav__episodes-link">Season 3</a></li>
+              <li class="nav__episodes-item">
+                <a href="#" class="nav__episodes-link">Season 1</a>
+              </li>
+              <li class="nav__episodes-item">
+                <a href="#" class="nav__episodes-link">Season 2</a>
+              </li>
+              <li class="nav__episodes-item">
+                <a href="#" class="nav__episodes-link">Season 3</a>
+              </li>
             </ul>
           </li>
           <li class="nav__item"><a href="#" class="nav__link">Blog</a></li>
@@ -35,35 +41,46 @@
               <span>Donate</span>
             </a>
           </li>
-          <li class="nav__item nav__item--search"><button class="icon-nav icon--search"></button></li>
+          <li class="nav__item nav__item--search">
+            <button class="icon-nav icon--search"></button>
+          </li>
         </ul>
       </nav>
     </header>
     <div class="content">
       <section class="slider">
         <div class="slider__image">
-          <img src="img/img__item1.png" alt="">
+          <img src="img/img__item1.png" alt="" />
         </div>
-        <h3 class="slider__title">How to rapidly test any experience!</h3>
+        <h2 class="slider__title">How to rapidly test any experience!</h2>
         <div class="slider__player">
-          <button class="icon-slider icon--play"><span class="blind">play</span></button>
+          <button class="icon-slider icon--play">
+            <span class="blind">play</span>
+          </button>
           <span class="player__time player__time--current">00:00</span>
           <div class="player__bar">
             <div class="player__bar-on"></div>
           </div>
           <span class="player__time player__time--total">02:45</span>
-          <button class="icon-slider icon--volume"><span class="blind">volume</span></button>
-          <button class="icon-slider icon--download"><span class="blind">download</span></button>
+          <button class="icon-slider icon--volume">
+            <span class="blind">volume</span>
+          </button>
+          <button class="icon-slider icon--download">
+            <span class="blind">download</span>
+          </button>
         </div>
         <div class="slider__channels">
           <span class="channels__title">Listen on</span>
           <ul class="channels__list">
-            <li class="channels__item"><a href="#" class="icon-channels icon--spotify"><span
-                  class="blind">spotify</span></a></li>
-            <li class="channels__item"><a href="#" class="icon-channels icon--soundcloud"><span
-                  class="blind">soundcloud</span></a></li>
-            <li class="channels__item"><a href="#" class="icon-channels icon--apple"><span
-                  class="blind">apple</span></a></li>
+            <li class="channels__item">
+              <a href="#" class="icon-channels icon--spotify"><span class="blind">spotify</span></a>
+            </li>
+            <li class="channels__item">
+              <a href="#" class="icon-channels icon--soundcloud"><span class="blind">soundcloud</span></a>
+            </li>
+            <li class="channels__item">
+              <a href="#" class="icon-channels icon--apple"><span class="blind">apple</span></a>
+            </li>
           </ul>
         </div>
       </section>
@@ -76,10 +93,45 @@
               <span class="episodes__time">Jan 18, 2021</span>
             </div>
           </div>
-          <h2 class="episodes__title">23 - How to rapidly test any experience!</h2>
-          <p class="episodes__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,
-            consect adipiscing elit. Sed at
-            arcu dui. Aenean placerat mauris nisl...</p>
+          <h3 class="episodes__title only-pc">
+            23 - How to rapidly test any experience!
+          </h3>
+          <h3 class="episodes__title only-mo">23 - Makemeup Podcast Theme</h3>
+          <p class="episodes__desc only-pc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
+            ipsum dolor sit amet, consect adipiscing elit. Sed at arcu dui.
+            Aenean placerat mauris nisl...
+          </p>
+          <p class="episodes__desc only-mo">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet...
+          </p>
+          <a href="#" class="episodes__btn episodes__btn--first">
+            <span class="icon--play2"><span class="blind">play</span></span>
+            <span class="btn-title">listen now</span>
+          </a>
+        </div>
+
+        <div class="episodes__item">
+          <div class="episodes__tags">
+            <div class="episodes__date">
+              <span class="episodes__category only-pc">Business</span>
+              <span class="episodes__category only-mo">Education</span>
+              <span class="episodes__time">Jan 18, 2021</span>
+            </div>
+          </div>
+          <h3 class="episodes__title only-pc">
+            22 - Everything you need to know about mind mapping creation
+          </h3>
+          <h3 class="episodes__title only-mo">
+            22 - Makemeup Podcast Theme; launch an audio podcast website
+          </h3>
+          <p class="episodes__desc only-pc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
+            ipsum dolor sit amet, consect adipiscing elit...
+          </p>
+          <p class="episodes__desc only-mo">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at arcu dui. Aenean placerat mauris nisl...
+          </p>
           <a href="#" class="episodes__btn">
             <span class="icon--play2"><span class="blind">play</span></span>
             <span class="btn-title">listen now</span>
@@ -89,29 +141,21 @@
         <div class="episodes__item">
           <div class="episodes__tags">
             <div class="episodes__date">
-              <span class="episodes__category">Business</span>
+              <span class="episodes__category only-pc">Business</span>
+              <span class="episodes__category only-mo">Market</span>
               <span class="episodes__time">Jan 18, 2021</span>
             </div>
           </div>
-          <h2 class="episodes__title">22 - Everything you need to know about mind mapping creation</h2>
-          <p class="episodes__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,
-            consect adipiscing elit...</p>
-          <a href="#" class="episodes__btn">
-            <span class="icon--play2"><span class="blind">play</span></span>
-            <span class="btn-title">listen now</span>
-          </a>
-        </div>
-
-        <div class="episodes__item">
-          <div class="episodes__tags">
-            <div class="episodes__date">
-              <span class="episodes__category">Business</span>
-              <span class="episodes__time">Jan 18, 2021</span>
-            </div>
-          </div>
-          <h2 class="episodes__title">21 - Makemeup Podcast Theme; launch it now !</h2>
-          <p class="episodes__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,
-            consect adipiscing elit...</p>
+          <h3 class="episodes__title">
+            21 - Makemeup Podcast Theme; launch it now !
+          </h3>
+          <p class="episodes__desc only-pc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
+            ipsum dolor sit amet, consect adipiscing elit...
+          </p>
+          <p class="episodes__desc only-mo">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet...
+          </p>
           <a href="#" class="episodes__btn">
             <span class="icon--play2"><span class="blind">play</span></span>
             <span class="btn-title">listen now</span>
@@ -132,34 +176,40 @@
         <div class="member__list">
           <div class="member__item">
             <div class="member__thumb">
-              <img src="img/img__team1.png" alt="Aida Cave">
+              <img src="img/img__team1.png" alt="Aida Cave" />
             </div>
             <div class="member__info">
               <span class="info__position">Position</span>
               <strong class="info__name">Aida Cave</strong>
               <ul class="member__sns">
-                <li class="sns-item"><a href="#" class="icon-sns icon--linkedin"><span class="blind">linkedin</span></a>
+                <li class="sns-item">
+                  <a href="#" class="icon-sns icon--linkedin"><span class="blind">linkedin</span></a>
                 </li>
-                <li class="sns-item"><a href="#" class="icon-sns icon--github"><span class="blind">github</span></a>
+                <li class="sns-item">
+                  <a href="#" class="icon-sns icon--github"><span class="blind">github</span></a>
                 </li>
-                <li class="sns-item"><a href="#" class="icon-sns icon--twitter"><span class="blind">twitter</span></a>
+                <li class="sns-item">
+                  <a href="#" class="icon-sns icon--twitter"><span class="blind">twitter</span></a>
                 </li>
               </ul>
             </div>
           </div>
           <div class="member__item">
             <div class="member__thumb">
-              <img src="img/img__team2.png" alt="Nick cartleton">
+              <img src="img/img__team2.png" alt="Nick cartleton" />
             </div>
             <div class="member__info">
               <span class="info__position">Position</span>
               <strong class="info__name">Nick Carleton</strong>
               <ul class="member__sns">
-                <li class="sns-item"><a href="#" class="icon-sns icon--linkedin"><span class="blind">linkedin</span></a>
+                <li class="sns-item">
+                  <a href="#" class="icon-sns icon--linkedin"><span class="blind">linkedin</span></a>
                 </li>
-                <li class="sns-item"><a href="#" class="icon-sns icon--github"><span class="blind">github</span></a>
+                <li class="sns-item">
+                  <a href="#" class="icon-sns icon--github"><span class="blind">github</span></a>
                 </li>
-                <li class="sns-item"><a href="#" class="icon-sns icon--twitter"><span class="blind">twitter</span></a>
+                <li class="sns-item">
+                  <a href="#" class="icon-sns icon--twitter"><span class="blind">twitter</span></a>
                 </li>
               </ul>
             </div>
@@ -171,7 +221,7 @@
         <div class="posts__list">
           <div class="posts__item">
             <div class="posts__thumb">
-              <img src="img/img__item2.png" alt="clock">
+              <img src="img/img__item2.png" alt="clock" />
             </div>
             <div class="posts__desc">
               <strong class="posts__desc-title">How to create your own podcast cover art?</strong>
@@ -181,7 +231,7 @@
           </div>
           <div class="posts__item">
             <div class="posts__thumb">
-              <img src="img/img__item3.png" alt="headphone">
+              <img src="img/img__item3.png" alt="headphone" />
             </div>
             <div class="posts__desc">
               <strong class="posts__desc-title">How to create your own podcast cover art?</strong>
@@ -199,16 +249,24 @@
     <div class="footer content">
       <div class="footer__container">
         <ul class="footer__nav">
-          <li class="footer__nav-item"><a href="#" class="footer__nav-link">Episodes</a></li>
-          <li class="footer__nav-item"><a href="#" class="footer__nav-link">Blog</a></li>
-          <li class="footer__nav-item"><a href="#" class="footer__nav-link">Contact</a></li>
-          <li class="footer__nav-item"><a href="#" class="footer__nav-link">Donate</a></li>
+          <li class="footer__nav-item">
+            <a href="#" class="footer__nav-link">Episodes</a>
+          </li>
+          <li class="footer__nav-item">
+            <a href="#" class="footer__nav-link">Blog</a>
+          </li>
+          <li class="footer__nav-item">
+            <a href="#" class="footer__nav-link">Contact</a>
+          </li>
+          <li class="footer__nav-item">
+            <a href="#" class="footer__nav-link">Donate</a>
+          </li>
         </ul>
         <div class="footer__signup">
           <h2 class="footer__title">Newsletter</h2>
           <span class="footer__desc">Sign up now; get closer to our action.</span>
           <div class="footer__input">
-            <input type="text" id="gmail" name="gmail" class="input-gmail" placeholder="Email adress...">
+            <input type="text" id="gmail" name="gmail" class="input-gmail" placeholder="Email adress..." />
             <a href="#" class="btn-send"><span class="blind">send gmail</span></a>
           </div>
         </div>
@@ -216,11 +274,14 @@
       <div class="footer__policy">
         <span class="footer__policy-desc">PodcastTheme By VitaThemes &#124; Privacy Policy</span>
         <ul class="footer__sns">
-          <li class="footer__sns-item"><a href="#" class="footer__icon footer__icon--facebook"><span class="blind">facebook</span></a>
+          <li class="footer__sns-item">
+            <a href="#" class="footer__icon footer__icon--facebook"><span class="blind">facebook</span></a>
           </li>
-          <li class="footer__sns-item"><a href="#" class="footer__icon footer__icon--github"><span class="blind">github</span></a>
+          <li class="footer__sns-item">
+            <a href="#" class="footer__icon footer__icon--github"><span class="blind">github</span></a>
           </li>
-          <li class="footer__sns-item"><a href="#" class="footer__icon footer__icon--twitter"><span class="blind">twitter</span></a>
+          <li class="footer__sns-item">
+            <a href="#" class="footer__icon footer__icon--twitter"><span class="blind">twitter</span></a>
           </li>
         </ul>
       </div>
