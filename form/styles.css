@@ -68,7 +68,7 @@ input {
 }
 
 .form__item {
-  width: calc(50% - 25px);
+  width: calc(50% - 23px);
   margin-bottom: 50px;
 }
 
@@ -118,7 +118,7 @@ input {
 
 @media screen and (min-width: 768px) {
   .form__item:nth-child(even) {
-    margin-left: 50px;
+    margin-left: 46px;
   }
 }
 
