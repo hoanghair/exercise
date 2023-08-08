@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  
   $(".btn__menu").click(function () {
     if ($(this).hasClass("btn__menu-on")) {
       $(".nav").show();
@@ -9,3 +10,4 @@ $(document).ready(function () {
     }
   });
 });
+
