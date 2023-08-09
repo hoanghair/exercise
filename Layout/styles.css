@@ -88,8 +88,8 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 150px;
   height: 105px;
+  padding: 0px 150px;
   border-bottom: 1px solid #eaeaee;
 }
 
@@ -113,13 +113,11 @@ a {
   font-size: 0;
 }
 .nav__item + .nav__item {
-  /* margin-left: 19px; */
   margin-left: 37px;
 }
 
 .nav__item a,
 .nav__item button {
-  /* display: inline-block; */
   font-size: 12px;
   font-weight: 600;
   line-height: 15px;
@@ -212,7 +210,7 @@ a {
   max-width: 670px;
   margin: 96px auto 0;
 }
-.nav__item--episodes:hover .icon--down{
+.nav__item--episodes:hover .icon--down {
   transform: rotate(180deg);
 }
 
@@ -277,10 +275,12 @@ a {
 }
 
 .player__bar-on {
+  display: inline-block;
   width: 27%;
   height: 100%;
   border-radius: 2px;
   background-color: #222;
+  vertical-align: top;
 }
 
 .icon-slider {
@@ -341,7 +341,6 @@ a {
   display: inline-block;
   background-image: url("img/list_channels.png");
   background-repeat: no-repeat;
-  /* vertical-align: middle; */
 }
 
 .icon--spotify {
@@ -407,29 +406,34 @@ a {
 }
 .episodes__category::after {
   position: absolute;
-  width: 1px;
-  height: 18px;
   top: 1px;
   right: -9px;
-  background-color: #979797;
-  content: "";
+  content: "|";
 }
 .episodes__time {
   margin-left: 16px;
 }
 .episodes__title {
+  overflow: hidden;
+  max-height: 25px;
   margin-top: 10px;
   font-size: 21px;
   font-weight: 600;
   line-height: 25px;
   color: #222;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .episodes__desc {
+  overflow: hidden;
+  max-height: 50px;
   margin-top: 12px;
   font-size: 16px;
   font-weight: 400;
   line-height: 25px;
   color: #555;
+  text-overflow: ellipsis;
+  white-space: wrap;
 }
 .episodes__btn {
   display: flex;
@@ -439,10 +443,9 @@ a {
 }
 
 .icon--play2 {
-  display: inline-block;
   width: 24px;
   height: 24px;
-  background: url(img/icon__play2.png) no-repeat center/contain;
+  background-position: -84px -2px;
 }
 .btn-title {
   margin-left: 10px;
@@ -510,11 +513,11 @@ a {
 }
 .member__thumb {
   position: relative;
-  padding-top: 100%;
   width: 100%;
+  padding-top: 100%;
 }
 .member__thumb img {
-  display: block;
+  display: inline-block;
   position: absolute;
   top: 0;
   left: 0;
@@ -551,10 +554,10 @@ a {
   margin-top: 16px;
   line-height: 0;
 }
-.sns-item + .sns-item {
+.sns__item + .sns__item {
   margin-left: 16px;
 }
-.icon-sns {
+.sns__icon {
   display: inline-block;
   background-image: url("img/list_sns.png");
   background-repeat: no-repeat;
@@ -617,14 +620,18 @@ a {
   flex-direction: column;
   margin-left: 39px;
 }
-.posts__desc-title {
-  display: block;
+.posts__name {
+  display: inline-block;
+  overflow: hidden;
+  max-height: 50px;
   font-size: 21px;
   font-weight: 600;
   line-height: 25px;
   color: #222;
+  text-overflow: ellipsis;
+  white-space: wrap;
 }
-.posts__desc-date {
+.posts__date {
   display: block;
   margin-top: 16px;
   font-size: 14px;
@@ -632,13 +639,12 @@ a {
   line-height: 18px;
   color: #979797;
 }
-.posts__desc-more {
+.posts__more {
   display: flex;
   align-items: center;
   height: 57%;
 }
-.posts__desc-link {
-  /* margin-top: -21px; */
+.posts__link {
   color: #7247ca;
   font-size: 14px;
   font-weight: 600;
@@ -739,9 +745,10 @@ a {
   border-radius: 4px;
   background-color: #7247ca;
   transform: translateY(-50%);
+  cursor: pointer;
 }
 .btn-send::before {
-  display: block;
+  display: inline-block;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -770,35 +777,30 @@ a {
 .footer__sns-item + .footer__sns-item {
   margin-left: 23px;
 }
-.footer__icon {
-  display: inline-block;
-  background-image: url("img/list_sns2.png");
-  background-repeat: no-repeat;
-}
 
-.footer__icon--facebook {
+.sns__icon--facebook {
   width: 9px;
   height: 15px;
-  background-position: -2px -2px;
+  background-position: -48px -2px;
 }
 
-.footer__icon--github {
+.sns__icon--github {
   width: 16px;
   height: 15px;
-  background-position: -13px -2px;
+  background-position: -59px -2px;
 }
 
-.footer__icon--twitter {
+.sns__icon--twitter {
   width: 18px;
   height: 15px;
-  background-position: -31px -2px;
+  background-position: -77px -2px;
 }
 /*// footer */
 
 @media screen and (max-width: 1024px) {
   .header {
-    padding: 0px 60px;
     height: 75px;
+    padding: 0px 60px;
   }
 }
 
@@ -866,33 +868,30 @@ a {
     line-height: 18px;
     letter-spacing: 0.16em;
   }
-  .nav__episodes-list{
+  .nav__episodes-list {
     position: static;
     margin-top: 24px;
     background-color: #fff;
     box-shadow: none;
     text-align: center;
   }
-  .nav__episodes-item{
+  .nav__episodes-item {
     padding: 0;
   }
-  .nav__episodes-item + .nav__episodes-item{
+  .nav__episodes-item + .nav__episodes-item {
     margin-top: 16px;
   }
   .member__item {
     flex-basis: calc(50% - 20px);
   }
-  .footer{
+  .footer {
     padding: 0 60px;
   }
-  
 }
 
 @media only screen and (max-width: 480px) {
-  
-
   .content {
-    margin: 48px auto 24px;
+    margin: 65px auto 24px;
     padding: 0 16px;
     border-bottom: 1px solid#EAEAEE;
   }
@@ -914,12 +913,18 @@ a {
   .episodes {
     margin-top: 64px;
   }
+  .episodes__title {
+    max-height: 75px;
+    white-space: wrap;
+  }
   .episodes__status {
     margin-right: 10px;
     padding: 6px 7px;
   }
   .episodes__desc {
+    max-height: 75px;
     margin-top: 10px;
+    white-space: wrap;
   }
   .episodes__item:nth-child(1),
   .episodes__item:nth-child(2) {
@@ -967,7 +972,7 @@ a {
   .posts__desc {
     margin: 16px 0 0 0;
   }
-  .posts__desc-more {
+  .posts__more {
     margin-top: 16px;
   }
   .posts__item + .posts__item {
@@ -983,8 +988,9 @@ a {
   /* Latest Posts */
 
   /* footer */
-  .footer{
+  .footer {
     padding: 0 16px;
+    margin: 47px auto 39px;
   }
   .footer__container {
     display: block;
@@ -1006,4 +1012,19 @@ a {
     margin-top: 64px;
   }
   /* footer */
+}
+
+.team-thumb
+
+.thumb {
+  width: 180px;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.thumb .img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
