@@ -15,33 +15,33 @@
     <header class="header">
       <!-- logo -->
       <h1 class="logo">
-        <a href="#">CastPress.</a>
+        <a href="#" class="logo__link">CastPress.</a>
       </h1>
       <!-- // logo -->
 
-      <!-- menu -->
-      <div class="menu only-mo">
-        <button class="btn__menu btn__menu-on"></button>
+      <!-- navbar -->
+      <div class="navbar only-mo">
+        <button class="btn__navbar btn__navbar-on"></button>
       </div>
-      <!-- // menu -->
+      <!-- // navbar -->
 
       <!-- nav-->
       <nav class="nav">
         <ul class="nav__list">
-          <li class="nav__item nav__item--episodes">
-            <button class="nav__episodes-title nav__link">
-              <span>Episodes</span>
+          <li class="nav__item nav__item--paraent">
+            <button class="paraent__title">
+              Episodes
               <span class="icon-nav icon--down"></span>
             </button>
-            <ul class="nav__episodes-list">
-              <li class="nav__episodes-item">
-                <a href="#" class="nav__episodes-link">Season 1</a>
+            <ul class="nav__child">
+              <li class="nav__child-item">
+                <a href="#" class="nav__child-link">Season 1</a>
               </li>
-              <li class="nav__episodes-item">
-                <a href="#" class="nav__episodes-link">Season 2</a>
+              <li class="nav__child-item">
+                <a href="#" class="nav__child-link">Season 2</a>
               </li>
-              <li class="nav__episodes-item">
-                <a href="#" class="nav__episodes-link">Season 3</a>
+              <li class="nav__child-item">
+                <a href="#" class="nav__child-link">Season 3</a>
               </li>
             </ul>
           </li>
@@ -50,12 +50,12 @@
           <li class="nav__item nav__item--heart">
             <a href="#" class="nav__link">
               <span class="icon-nav icon--heart"></span>
-              <span>Donate</span>
+              Donate
             </a>
           </li>
-          <li class="nav__item nav__item--search only-pc">
-            <button class="icon-nav icon--search"></button>
-          </li>
+          <button class="nav__item nav__item--search only-pc">
+            <span class="icon-nav icon--search"><span class="blind">search</span></span>
+          </button>
         </ul>
       </nav>
       <!-- // nav -->
@@ -64,29 +64,29 @@
 
     <!-- content -->
     <div class="content">
-      <!-- slider -->
-      <section class="slider">
-        <div class="slider__image">
-          <img src="img/img__item1.png" alt="image slider">
+      <!-- audio -->
+      <section class="audio">
+        <div class="thumb audio__thumb">
+          <img class="img" src="img/img__item1.png" alt="image audio">
         </div>
-        <h2 class="slider__title">How to rapidly test any experience!</h2>
-        <div class="slider__player">
-          <button class="icon-slider icon--play">
+        <h2 class="audio__title">How to rapidly test any experience!</h2>
+        <div class="audio__player">
+          <button class="icon-audio icon--play">
             <span class="blind">play</span>
           </button>
           <span class="player__time player__time--current">00:00</span>
-          <div class="player__bar">
-            <span class="player__bar-on"></span>
+          <div class="player__progree">
+            <span class="player__progree-on" style="width:27%;"></span>
           </div>
           <span class="player__time player__time--total">02:45</span>
-          <button class="icon-slider icon--volume">
+          <button class="icon-audio icon--volume">
             <span class="blind">volume</span>
           </button>
-          <button class="icon-slider icon--download">
+          <button class="icon-audio icon--download">
             <span class="blind">download</span>
           </button>
         </div>
-        <div class="slider__channels">
+        <div class="audio__channels">
           <span class="channels__title">Listen on</span>
           <ul class="channels__list">
             <li class="channels__item">
@@ -101,7 +101,7 @@
           </ul>
         </div>
       </section>
-      <!-- // slider -->
+      <!-- // audio -->
 
       <!-- episodes  -->
       <section class="episodes">
@@ -113,20 +113,12 @@
               <span class="episodes__time">Jan 18, 2021</span>
             </div>
           </div>
-          <div class="title-wrap">
-            <h3 class="episodes__title only-pc">23 - How to rapidly test any experience!</h3>
-            <h3 class="episodes__title only-mo">23 - Makemeup Podcast Theme</h3>
-          </div>
-          <div class="desc-wrap">
-            <p class="episodes__desc only-pc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
-              ipsum dolor sit amet, consect adipiscing elit. Sed at arcu dui.
-              Aenean placerat mauris nisl...
-            </p>
-            <p class="episodes__desc only-mo">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet...
-            </p>
-          </div>
+          <h3 class="title episodes__title only-pc">23 - How to rapidly test any experience!</h3>
+          <p class="episodes__desc only-pc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
+            ipsum dolor sit amet, consect adipiscing elit. Sed at arcu dui.
+            Aenean placerat mauris nisl...
+          </p>
           <a href="#" class="episodes__btn episodes__btn--first">
             <span class="icon-channels icon--play2"><span class="blind">play</span></span>
             <span class="btn-title">listen now</span>
@@ -136,30 +128,17 @@
         <div class="episodes__item">
           <div class="episodes__tags">
             <div class="episodes__date">
-              <div class="category-wrap">
-                <span class="episodes__category only-pc">Business</span>
-                <span class="episodes__category only-mo">Education</span>
-              </div>
+              <span class="episodes__category only-pc">Business</span>
               <span class="episodes__time">Jan 18, 2021</span>
             </div>
           </div>
-          <div class="title-wrap">
-            <h3 class="episodes__title only-pc">
-              22 - Everything you need to know about mind mapping creation
-            </h3>
-            <h3 class="episodes__title only-mo">
-              22 - Makemeup Podcast Theme; launch an audio podcast website
-            </h3>
-          </div>
-          <div class="desc-wrap">
-            <p class="episodes__desc only-pc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
-              ipsum dolor sit amet, consect adipiscing elit...
-            </p>
-            <p class="episodes__desc only-mo">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at arcu dui. Aenean placerat mauris nisl...
-            </p>
-          </div>
+          <h3 class="title episodes__title only-pc">
+            22 - Everything you need to know about mind mapping creation
+          </h3>
+          <p class="episodes__desc only-pc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
+            ipsum dolor sit amet, consect adipiscing elit...
+          </p>
           <a href="#" class="episodes__btn">
             <span class="icon-channels icon--play2"><span class="blind">play</span></span>
             <span class="btn-title">listen now</span>
@@ -169,25 +148,17 @@
         <div class="episodes__item">
           <div class="episodes__tags">
             <div class="episodes__date">
-              <div class="category-wrap">
-                <span class="episodes__category only-pc">Business</span>
-                <span class="episodes__category only-mo">Market</span>
-              </div>
+              <span class="episodes__category only-pc">Business</span>
               <span class="episodes__time">Jan 18, 2021</span>
             </div>
           </div>
-          <h3 class="episodes__title">
+          <h3 class="title episodes__title">
             21 - Makemeup Podcast Theme; launch it now !
           </h3>
-          <div class="desc-wrap">
-            <p class="episodes__desc only-pc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
-              ipsum dolor sit amet, consect adipiscing elit...
-            </p>
-            <p class="episodes__desc only-mo">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet...
-            </p>
-          </div>
+          <p class="episodes__desc only-pc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
+            ipsum dolor sit amet, consect adipiscing elit...
+          </p>
           <a href="#" class="episodes__btn">
             <span class="icon-channels icon--play2"><span class="blind">play</span></span>
             <span class="btn-title">listen now</span>
@@ -206,45 +177,55 @@
       <!-- // episodes -->
 
       <!-- member -->
-      <section class="member">
-        <h2 class="member__title">Team</h2>
-        <div class="member__list">
+      <section class="section section--member">
+        <h2 class="section__title">Team</h2>
+        <div class="section__content member">
           <div class="member__item">
-            <div class="member__thumb">
-              <img src="img/img__team1.png" alt="Aida Cave">
+            <div class="thumb member__thumb">
+              <img class="img member__img" src="img/img__team1.png" alt="Aida Cave">
             </div>
             <div class="member__info">
               <span class="info__position">Position</span>
               <strong class="info__name">Aida Cave</strong>
               <ul class="member__sns">
                 <li class="sns__item">
-                  <a href="#" class="sns__icon icon--linkedin"><span class="blind">linkedin</span></a>
+                  <a href="#" class="sns__link">
+                    <span class="sns__icon icon--linkedin"><span class="blind">linkedin</span></span>
+                  </a>
                 </li>
                 <li class="sns__item">
-                  <a href="#" class="sns__icon icon--github"><span class="blind">github</span></a>
+                  <a href="#" class="sns__link">
+                    <span class="sns__icon icon--github"><span class="blind">github</span></a></span>
                 </li>
                 <li class="sns__item">
-                  <a href="#" class="sns__icon icon--twitter"><span class="blind">twitter</span></a>
+                  <a href="#" class="sns__link">
+                    <span class="sns__icon icon--twitter"><span class="blind">twitter</span></span>
+                  </a>
                 </li>
               </ul>
             </div>
           </div>
           <div class="member__item">
-            <div class="member__thumb">
-              <img src="img/img__team2.png" alt="Nick cartleton">
+            <div class="thumb member__thumb">
+              <img class="img member__img" src="img/img__team2.png" alt="Nick cartleton">
             </div>
             <div class="member__info member__info--nick">
               <span class="info__position">Position</span>
               <strong class="info__name">Nick Carleton</strong>
               <ul class="member__sns">
                 <li class="sns__item">
-                  <a href="#" class="sns__icon icon--linkedin"><span class="blind">linkedin</span></a>
+                  <a href="#" class="sns__link">
+                    <span class="sns__icon icon--linkedin"><span class="blind">linkedin</span></span>
+                  </a>
                 </li>
                 <li class="sns__item">
-                  <a href="#" class="sns__icon icon--github"><span class="blind">github</span></a>
+                  <a href="#" class="sns__link">
+                    <span class="sns__icon icon--github"><span class="blind">github</span></a></span>
                 </li>
                 <li class="sns__item">
-                  <a href="#" class="sns__icon icon--twitter"><span class="blind">twitter</span></a>
+                  <a href="#" class="sns__link">
+                    <span class="sns__icon icon--twitter"><span class="blind">twitter</span></span>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -254,9 +235,9 @@
       <!-- // member -->
 
       <!-- posts -->
-      <section class="posts">
-        <h2 class="posts__title">Latest Posts</h2>
-        <div class="posts__list">
+      <section class="section section--posts">
+        <h2 class="section__title">Latest Posts</h2>
+        <div class="section__content posts">
           <div class="posts__item">
             <div class="posts__thumb">
               <img src="img/img__item2.png" alt="clock">
