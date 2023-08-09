@@ -1014,11 +1014,11 @@ a {
   /* footer */
 }
 
-.team-thumb
+/* .team-thumb {
 
-.thumb {
-  width: 180px;
-  height: 180px;
+} */
+
+/* .thumb {
   overflow: hidden;
   border-radius: 4px;
 }
@@ -1027,4 +1027,4 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
+} */
