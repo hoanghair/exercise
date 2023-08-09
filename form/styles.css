@@ -84,6 +84,8 @@ input {
   padding: 0 23px;
   border: 1px solid #7eb693;
   border-radius: 16px;
+  font-family: Roboto;
+  font-size: 18px;
   outline: none;
   box-sizing: border-box;
 }
@@ -99,9 +101,11 @@ input {
 
 .form__input--message {
   height: 247px;
-  padding-top: 28px;
+  padding: 28px 23px;
 }
-
+textarea {
+  resize: none;
+}
 .form__submit {
   width: 220px;
   height: 80px;
@@ -111,7 +115,6 @@ input {
   font-family: Roboto;
   font-size: 20px;
   font-weight: 700;
-  line-height: 23px;
   color: #fff;
   cursor: pointer;
 }
@@ -140,8 +143,9 @@ input {
 
   .form__input--message {
     height: 150px;
-    padding-top: 12px;
+    padding: 12px;
   }
+
   ::placeholder {
     font-size: 16px;
   }

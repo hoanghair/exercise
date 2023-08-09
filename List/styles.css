@@ -117,7 +117,6 @@ ul {
 }
 
 .member {
-  display: inline-block;
   margin-top: 42px;
   font-size: 0;
 }
@@ -125,9 +124,9 @@ ul {
 .member__item {
   display: inline-block;
   overflow: hidden;
-  width: calc(33.33% - (54px / 3));
+  width: calc(33.33% - 18px);
   margin-top: 42px;
-  border-radius: 30px 30px 30px 30px;
+  border-radius: 30px;
   background-color: #f9f8f8;
   transition: box-shadow 0.5s ease;
 }

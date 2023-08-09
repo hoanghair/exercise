@@ -46,6 +46,7 @@ button {
 ol,
 ul {
   margin: 0;
+  padding: 0;
   font-size: 100%;
   list-style: none;
 }
@@ -110,10 +111,17 @@ body {
   text-align: right;
 }
 .type__item:first-child {
-  margin-right: 9px;
+  position: relative;
 }
-.type__item:last-child {
-  margin-left: 9px;
+
+.type__item:first-child:before {
+  position: absolute;
+  top: 0;
+  right: -13px;
+  content: '/';
+}
+.type__item + .type__item{
+  margin-left: 24px;
 }
 .type-dashboard {
   color: #64748b;
@@ -178,7 +186,7 @@ tbody td:first-child {
 }
 
 tbody tr:last-child td {
-  border-bottom: 0;
+  border-bottom: 1px solid transparent;
 }
 
 tbody td:nth-child(3) {
@@ -191,22 +199,22 @@ tbody td:nth-child(5) {
 
 .cell-text {
   display: inline-block;
-  vertical-align: middle;
   margin-left: 8px;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
-  text-align: left;
   color: #1c2434;
+  text-align: left;
+  vertical-align: middle; 
 }
 
 .icon {
   display: inline-block;
-  vertical-align: middle;
+  overflow: hidden;
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  overflow: hidden;
+  vertical-align: middle;
 }
 .icon img {
   width: 100%;
