@@ -38,7 +38,9 @@ button {
   font-size: 100%;
   font-family: ClashDisplay;
 }
-
+body {
+  background-color: #f5f5f5;
+}
 ol,
 ul {
   list-style: none;
@@ -80,23 +82,29 @@ a {
   display: block;
   height: 129px;
   line-height: 129px;
-  background-color: var(--dark-primary);
+  /* background-color: var(--dark-primary); */
 }
 .title {
   margin: 40px 44px;
   display: inline-block;
+  padding-left: 10px;
+  border-left: 4px solid var(--primary);
   font-family: Satoshi;
   font-size: 36px;
   font-weight: 400;
   line-height: 49px;
-  color: var(--white);
+  color: var(--dark-primary);
 }
 .content {
-  margin: 56px 56px 80px 56px;
-  font-size: 0;
+  padding: 56px;
+  border-radius: 4px;
+  background-color: var(--white);
 }
+
+/* <!-- [D] Colors --> */
 .content__list {
   display: block;
+  font-size: 0;
 }
 .content__item {
   display: inline-block;
@@ -110,6 +118,8 @@ a {
   width: 115px;
   height: 115px;
   border: 2px solid var(--dark-primary);
+  font-size: 18px;
+  text-align: center;
   box-sizing: border-box;
 }
 .content__name {
@@ -121,20 +131,131 @@ a {
   color: var(--dark-primary);
 }
 .content__item:nth-child(1) .content__color {
-  background-color: var(--dark-primary); 
+  background-color: var(--dark-primary);
 }
 .content__item:nth-child(2) .content__color {
-  background-color: var(--primary); 
+  background-color: var(--primary);
 }
 .content__item:nth-child(3) .content__color {
-  background-color: var(--light-gray); 
+  background-color: var(--light-gray);
 }
 .content__item:nth-child(4) .content__color {
-  background-color: var(--border-gray); 
+  background-color: var(--border-gray);
 }
 .content__item:nth-child(5) .content__color {
-  background-color: var(--white); 
+  background-color: var(--white);
 }
 .content__item:nth-child(6) .content__color {
-  background-color: var(--border-dark); 
+  background-color: var(--border-dark);
 }
+
+/* <!--// [D] Colors --> */
+
+/* <!-- [D] Typography --> */
+
+.table {
+  width: 100%;
+}
+thead {
+  height: 48px;
+  background-color: var(--light-gray);
+}
+thead tr th {
+  padding: 6px 10px;
+  font-family: Satoshi;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+}
+thead tr th:nth-child(3),
+thead tr th:nth-child(4) {
+  text-align: center;
+}
+tbody tr {
+  height: 93px;
+}
+tbody tr td {
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
+tbody tr td:nth-child(2) {
+  text-align: left;
+}
+tbody tr td:nth-child(3),
+tbody tr td:nth-child(4) {
+  text-align: center;
+}
+.heading-one {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 50px;
+}
+.heading-two {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 45px;
+}
+.heading-three {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 34px;
+}
+.heading-four {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+}
+.heading-five {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
+.heading-six {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.body-sm {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+.body-md {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.body-lg {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+}
+/* <!--// [D] Typography --> */
+
+/* <!-- [D] Button Medium --> */
+.content--bg {
+  background-color: var(--primary);
+  font-size: 0;
+}
+.btn {
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.btn + .btn {
+  margin-left: 40px;
+}
+.btn--white {
+  background-color: var(--white);
+  color: var(--dark-primary);
+}
+.btn--lightgrey {
+  background-color: var(--light-gray);
+  color: var(--dark-primary);
+}
+
+/* <!--// [D] Button Medium --> */
