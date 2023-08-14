@@ -95,13 +95,16 @@ a {
   object-fit: cover;
 }
 .title__name {
+  display: -webkit-box;
   overflow: hidden;
   font-size: 21px;
   font-weight: 600;
   line-height: 25px;
   color: #222;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  white-space: wrap;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 .section {
   margin-top: 64px;
@@ -288,7 +291,7 @@ a {
 .player__time--total {
   margin: 0 9px 0 11px;
 }
-.player__progree {
+.player__progress {
   width: 75%;
   height: 7px;
   border: 0;
@@ -296,7 +299,7 @@ a {
   background-color: #f5f5f7;
 }
 
-.player__progree-on {
+.player__progress-on {
   display: inline-block;
   height: 100%;
   border-radius: 2px;
@@ -334,11 +337,11 @@ a {
   background-position: -37px -2px;
 }
 
-.audio__channels {
+.audio__channel {
   margin-top: 39px;
 }
 
-.channels__title {
+.channel__title {
   display: block;
   font-size: 12px;
   font-weight: 600;
@@ -348,21 +351,21 @@ a {
   text-transform: uppercase;
 }
 
-.channels__list {
+.channel__list {
   display: block;
   text-align: center;
   margin-top: 12px;
 }
-.channels__item {
+.channel__item {
   display: inline-block;
   vertical-align: middle;
 }
-.channels__item + .channels__item {
+.channel__item + .channel__item {
   margin-left: 30px;
 }
-.icon-channels {
+.icon-channel {
   display: inline-block;
-  background-image: url("img/list_channels.png");
+  background-image: url("img/list_channel.png");
   background-repeat: no-repeat;
 }
 
@@ -389,21 +392,16 @@ a {
 .episodes {
   margin-top: 96px;
 }
-.episodes__item {
+.episodes__item + .episodes__item {
+  margin-top: 50px;
   font-size: 0;
-}
-.episodes__item:nth-child(2) {
-  margin-top: 70px;
-}
-.episodes__item:nth-child(3) {
-  margin-top: 51px;
 }
 .episodes__tags {
   display: inline-block;
 }
 .episodes__status {
-  margin-right: 8px;
   padding: 5px 8px;
+  border-radius: 3px;
   background-color: #f5f5f7;
   font-size: 10px;
   font-weight: 600;
@@ -411,6 +409,9 @@ a {
   letter-spacing: 0em;
   text-transform: uppercase;
   color: #7247ca;
+}
+.episodes__status ~ .episodes__date {
+  margin-left: 8px;
 }
 .episodes__date {
   display: inline-block;
@@ -426,8 +427,9 @@ a {
 }
 .episodes__category::after {
   position: absolute;
-  top: 0;
+  top: 50%;
   right: -9px;
+  transform: translateY(-50%);
   content: "|";
 }
 .episodes__time {
@@ -438,6 +440,7 @@ a {
   margin-top: 10px;
 }
 .episodes__desc {
+  display: -webkit-box;
   overflow: hidden;
   max-height: 50px;
   margin-top: 12px;
@@ -447,6 +450,8 @@ a {
   color: #555;
   text-overflow: ellipsis;
   white-space: wrap;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 .episodes__btn {
   display: inline-flex;
@@ -455,7 +460,7 @@ a {
   cursor: pointer;
 }
 
-.icon--play2 {
+.icon--playlisten {
   width: 24px;
   height: 24px;
   background-position: -84px -2px;
@@ -520,7 +525,7 @@ a {
   text-align: left;
 }
 .member__item:nth-child(even) {
-  float: right;
+  margin-left: 70px;
 }
 .member__item:nth-child(-n + 2) {
   margin-top: 0;
@@ -529,7 +534,6 @@ a {
 .member__thumb {
   position: relative;
   border-radius: 0;
-  width: 100%;
   padding-top: 100%;
 }
 .member__img {
@@ -567,7 +571,7 @@ a {
   margin-top: 13px;
   line-height: 0;
 }
-.sns__item{
+.sns__item {
   display: inline-block;
 }
 .sns__item + .sns__item {
@@ -904,7 +908,7 @@ a {
     margin-top: 24px;
   }
   .member__item:nth-child(even) {
-    float: none;
+    margin-left: 0;
   }
   .posts__desc {
     display: block;
@@ -920,10 +924,10 @@ a {
     margin: 65px auto 24px;
     border-bottom: 1px solid#EAEAEE;
   }
-  .player__progree {
+  .player__progress {
     width: 146px;
   }
-  .player__progree-on {
+  .player__progress-on {
     width: 14%;
   }
   .icon--download {
@@ -958,9 +962,7 @@ a {
 
   /* .member */
   .member__thumb {
-    position: relative;
     padding-top: 104.1667%;
-    width: 100%;
   }
   .member__info {
     padding: 16px 9px;
