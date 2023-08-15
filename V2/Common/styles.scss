@@ -4,14 +4,14 @@
   font-family: "ClashDisplay";
   font-weight: 400;
   font-style: normal;
-  src: url(../Common/font/ClashDisplay-Regular.woff) format("woff");
+  src: url(/font/ClashDisplay-Regular.woff) format("woff");
 }
 
 @font-face {
   font-family: "Satoshi";
   font-weight: 400;
   font-style: normal;
-  src: url(../Common/font/Satoshi-Regular.woff) format("woff");
+  src: url(/font/Satoshi-Regular.woff) format("woff");
 }
 
 html,
@@ -101,17 +101,17 @@ a {
 }
 
 /* <!-- [D] Colors --> */
-.ui_content_list {
+.ui_color_list {
   display: block;
   font-size: 0;
 }
 
-.ui_content_item {
+.ui_color_item {
   display: inline-block;
   width: 115px;
 }
 
-.ui_content_item+.ui_content_item {
+.ui_color_item+.ui_color_item {
   margin-left: 34px;
 }
 
@@ -168,76 +168,119 @@ a {
     text-align: center;
   }
 
-  .heading_one {
-    font-size: 36px;
-    font-weight: 400;
-    line-height: 50px;
+  .heading {
+    &_one {
+      font-size: 36px;
+      font-weight: 400;
+      line-height: 50px;
+    }
+
+    &_two {
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 45px;
+    }
+
+    &_three {
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 34px;
+    }
+
+    &_four {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 28px;
+    }
+
+    &_five {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+    }
+
+    &_six {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+    }
   }
 
-  .heading_two {
-    font-size: 32px;
-    font-weight: 400;
-    line-height: 45px;
-  }
+  .body {
+    &_sm {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+    }
 
-  .heading_three {
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 34px;
-  }
+    &_md {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
 
-  .heading_four {
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 28px;
-  }
-
-  .heading_five {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 22px;
-  }
-
-  .heading_six {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
-  }
-
-  .body_sm {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 21px;
-  }
-
-  .body_md {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-  }
-
-  .body_lg {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 27px;
+    &_lg {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 27px;
+    }
   }
 }
 
 /* <!--// [D] Typography --> */
 
-/* <!-- [D] Button Medium --> */
+/* <!-- [D] Button --> */
 .ui_content_bg {
-  background-color: var(--primary);
+  background-color: #cbcbcb;
+  font-family: Satoshi;
   font-size: 0;
+}
+
+.ui_content_bg button {
+  font-family: Satoshi;
+}
+
+.ui_item+.ui_item {
+  margin-top: 40px;
+}
+
+.ui_section {
+  .ui_item {
+    display: inline-block;
+    margin-left: 60px;
+    vertical-align: top;
+
+    &:nth-child(1) {
+      display: block;
+    }
+
+    &:nth-child(-n+2) {
+      margin-left: 0;
+    }
+  }
+}
+
+.ui_item_title {
+  display: inline-block;
+  margin-bottom: 16px;
+  font-size: 20px;
+  line-height: 20px;
 }
 
 .ui_table_btn {
   thead tr th {
     text-align: center;
+    border-top: 1px solid var(--border-gray);
+    border-bottom: 1px solid var(--border-gray);
   }
 
   thead tr th:nth-child(1) {
     text-align: left;
+    border-left: 1px solid var(--border-gray);
+  }
+
+  thead tr th:last-child {
+    border-right: 1px solid var(--border-gray);
   }
 
   tbody tr td,
@@ -246,91 +289,379 @@ a {
   }
 
   tbody tr td:nth-child(1) {
+    border-right: 1px solid var(--border-gray);
+    border-left: 1px solid var(--border-gray);
     text-align: left;
   }
 
+  tbody tr td:last-child {
+    border-right: 1px solid var(--border-gray);
+  }
+
   .btn {
-    width: 111px;
-    height: 56px;
-    background-color: var(--white);
+    display: inline-flex;
+    align-items: center;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
-    color: var(--dark-primary);
-    cursor: pointer;
     box-sizing: border-box;
+    transition: background-color 0.3s ease-out;
+    cursor: pointer;
+
+    &_md {
+      padding: 16px 32px;
+    }
+
+    &_sm {
+      padding: 12px 24px;
+    }
+
   }
 
-  .btn+.btn {
-    margin-left: 40px;
+  .ico {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 12px;
+
+    &_downwhite {
+      background: url(/img/ico_down1.png) center no-repeat;
+    }
+
+    &_downdark {
+      background: url(/img/ico_down2.png) center no-repeat;
+    }
   }
 
-  .btn_md {
-    width: 111px;
-    height: 56px;
+  .btn.is_disabled {
+    opacity: 50%;
+    pointer-events: none;
   }
 
   /* <!-- [D] White --> */
-  .btn_white_def {
+  .btn_white {
     background-color: var(--white);
-  }
+    color: var(--dark-primary);
 
-  .btn_white_hov:hover {
-    background-color: var(--light-gray);
-    transition: all 0.3s ease-out;
-  }
+    &:hover {
+      background-color: var(--light-gray);
 
-  .btn_white_foc:focus {
-    border: 2px solid var(--primary);
-  }
+    }
 
-  .btn_white_disb {
-    opacity: 50%;
-    cursor: auto;
+    &:focus {
+      border: 2px solid var(--primary);
+    }
   }
 
   /* <!--// [D] White --> */
 
   /* <!-- [D] Secondary --> */
-  .btn_secondary_def {
+  .btn_secondary {
     background-color: var(--light-gray);
-  }
+    color: var(--dark-primary);
 
-  .btn_secondary_hov:hover {
-    background-color: var(--border-gray)
-  }
+    &:hover {
+      background-color: var(--border-gray);
 
-  .btn_secondary_foc:focus {
-    border: 2px solid var(--primary);
-  }
+    }
 
-  .btn_secondary_disb {
-    opacity: 50%;
-    cursor: auto;
+    &:focus {
+      border: 2px solid var(--primary);
+    }
   }
 
   /* <!--// [D] Secondary --> */
 
   /* <!-- [D] Primary --> */
-  .btn_primary_def {
+  .btn_primary {
+    background-color: var(--dark-primary);
+    color: var(--white);
+
+    &:hover {
+      background-color: var(--dark-primary-hover);
+    }
+
+    &:focus {
+      border: 2px solid var(--primary);
+    }
+  }
+
+  /* <!--// [D] Primary --> */
+
+  /* <!-- [D] Opaque --> */
+  .btn_opaque {
+    background-color: rgba(249, 249, 249, 0.15);
+    color: var(--white);
+
+    &:hover {
+      background: rgba(249, 249, 249, 0.3);
+    }
+
+    &:focus {
+      border: 2px solid var(--primary);
+    }
+  }
+
+  /* <!--// [D] Opaque --> */
+
+  /* <!-- [D] Ghost --> */
+  .btn_ghost {
+    background-color: transparent;
+    color: var(--dark-primary);
+
+    &:hover {
+      background: var(--border-gray);
+    }
+
+    &:focus {
+      border: 2px solid var(--primary);
+    }
+  }
+
+  /* <!--// [D] Ghost --> */
+}
+
+/* <!--// [D] Button--> */
+
+
+// <!-- [D] Product Card -->
+.ui_product {
+  padding: 20px;
+  font-size: 0;
+}
+
+.product_item {
+  display: inline-block;
+  width: 30%;
+  margin-top: 20px;
+  font-size: 0;
+
+  &:nth-child(even) {
+    display: inline-block;
+    width: calc(70% - 20px);
+    margin-left: 20px;
+  }
+
+  &:nth-child(-n + 2) {
+    margin-top: 0;
+  }
+
+  &:nth-child(even) .thum {
+    position: relative;
+    padding-top: 59.22%;
+    overflow: hidden;
+  }
+
+  .thum {
+    position: relative;
+    padding-top: 134%;
+    overflow: hidden;
+  }
+
+  .img {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .info {
+    &_title {
+      margin-top: 24px;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 28px;
+    }
+
+    &_price {
+      margin-top: 8px;
+      font-family: Satoshi;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 27px;
+    }
+  }
+}
+
+// <!-- [D] Product Card -->
+
+// <!-- [D] Other -->
+.ui_other{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  // &.ui_item{
+  //   flex: 0 0 ;
+  // }
+}
+// <!-- [D] Input -->
+.ui_other_item+.ui_other_item {
+  margin-top: 20px;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+::placeholder {
+  font-family: Satoshi;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.input {
+  width: 354px;
+  height: 56px;
+  padding: 0px 32px;
+
+  &_white {
+    background-color: var(--white);
+
+    &::placeholder {
+      color: var(--border-dark);
+    }
+  }
+
+  &_transparent {
+    background: rgba(255, 255, 255, 0.15);
+
+    &::placeholder {
+      color: var(--white);
+    }
+  }
+}
+
+.submit {
+  width: 118px;
+  height: 56px;
+  padding: 16px 32px 16px 32px;
+  font-family: Satoshi;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  vertical-align: bottom;
+  cursor: pointer;
+
+  &_dark {
     background-color: var(--dark-primary);
     color: var(--white);
   }
 
-  .btn_primary_hov:hover {
-    background-color: var(--dark-primary-hover);
+  &_white {
+    background-color: var(--white);
+    color: var(--dark-primary);
   }
-
-  .btn_primary_foc:focus {
-    border: 1px solid var(--primary);
-  }
-
-  .btn_primary_disb {
-    opacity: 50%;
-    cursor: auto;
-  }
-
-  /* <!--// [D] Primary --> */
 }
 
-/* <!--// [D] Button Medium --> */
+// <!-- [D] Input -->
+
+// <!-- [D] Stepper -->
+.counter_white {
+  background-color: var(--white);
+}
+
+.counter_gray {
+  background-color: var(--light-gray);
+}
+
+.counter {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 122px;
+  height: 46px;
+  padding: 12px 16px 12px 16px;
+  box-sizing: border-box;
+
+  span,
+  input {
+    display: inline-block;
+    font-family: Satoshi;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+  }
+
+  span {
+    padding: 0 8px;
+    color: var(--border-gray);
+    cursor: pointer;
+    user-select: none;
+  }
+
+  input {
+    width: 100%;
+    text-align: center;
+  }
+
+}
+
+// <!--// [D] Stepper -->
+
+// <!-- [D] Checkbox -->
+
+.checkbox {
+  input[type=checkbox] {
+    accent-color: var(--dark-primary);
+  }
+
+  &_input {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+  }
+
+  label {
+    padding-left: 12px;
+    font-family: Satoshi;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    vertical-align: bottom;
+    user-select: none;
+    cursor: pointer;
+  }
+}
+
+// <!--// [D] Checkbox -->
+
+// <!-- [D] Feature Card -->
+.ui_other_feature {
+  width: 305px;
+  height: 244px;
+  padding: 48px;
+  background-color: var(--light-gray);
+  box-sizing: border-box;
+}
+
+.ico_car {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(/img/ico_car.png) center no-repeat;
+}
+
+.feature_title {
+  display: block;
+  margin-top: 12px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.feature_disc {
+  margin-top: 12px;
+  font-family: Satoshi;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+// <!--// [D] Feature Card -->
+
+// <!--// [D] Other -->
