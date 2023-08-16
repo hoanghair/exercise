@@ -206,7 +206,9 @@ a {
   color: #979797;
   text-transform: capitalize;
 }
-
+.btn_search {
+  cursor: pointer;
+}
 .icon-nav {
   display: inline-block;
   background-image: url("img/list_icon_nav.png");
@@ -243,19 +245,11 @@ a {
 .content {
   margin-top: 96px;
 }
-/* .nav__item--parent {
-  display: inline-block;
-} */
+
 .nav__item--parent:hover .icon--down {
   transform: rotate(180deg);
 }
 /* // nav */
-
-/* audio */
-/* .audio {
-  margin: 0 auto;
-} */
-
 .audio__thumb {
   width: 180px;
   height: 180px;
@@ -396,7 +390,7 @@ a {
   margin-top: 50px;
   font-size: 0;
 }
-.episodes__tags {
+.episodes__info {
   display: inline-block;
   font-size: 0;
 }
@@ -411,13 +405,13 @@ a {
   text-transform: uppercase;
   color: #7247ca;
 }
-.episodes__status ~ .episodes__date {
+.episodes__status ~ .episodes__category {
   margin-left: 8px;
 }
-.episodes__date {
+
+.episodes__category,
+.episodes__time {
   display: inline-block;
-}
-.episodes__date span {
   font-size: 14px;
   font-weight: 400;
   line-height: 23px;
@@ -480,11 +474,14 @@ a {
 
 /* pagination */
 .pagination {
-  display: inline-flex;
-  align-items: center;
   margin-top: 64px;
 }
+.pagination__list {
+  display: inline-flex;
+  align-items: center;
+}
 .pagination__link {
+  display: inline-block;
   padding: 8px 12px 7px 12px;
   border-radius: 4px;
   background-color: #f5f5f7;
@@ -493,7 +490,7 @@ a {
   line-height: 15px;
   color: #555;
 }
-.pagination__link + .pagination__link {
+.pagination__item + .pagination__item {
   margin-left: 5px;
 }
 .pagination__link--more {
@@ -650,13 +647,11 @@ a {
   font-weight: 600;
   line-height: 25px;
 }
-.posts__view-btn {
-  display: inline-block;
-  margin-top: 48px;
-}
-.posts__view-link {
+
+.post__list-link {
   display: inline-block;
   position: relative;
+  margin-top: 48px;
   padding: 7px 30px 9px 16px;
   border-radius: 3px;
   background-color: #f5f5f7;
@@ -665,7 +660,7 @@ a {
   line-height: 18px;
   color: #7247ca;
 }
-.posts__view-link::after {
+.post__list-link::after {
   position: absolute;
   top: 50%;
   right: 16px;
@@ -679,8 +674,8 @@ a {
 
 /* footer */
 .footer {
-  margin-top: 64px;
-  margin-bottom: 39px;
+  padding-top: 64px;
+  padding-bottom: 39px;
 }
 .footer__nav {
   display: inline-block;
@@ -688,7 +683,7 @@ a {
 .footer__signup {
   float: right;
 }
-.footer__policy {
+.footer__copy {
   display: block;
 }
 .footer__nav-link {
@@ -762,30 +757,44 @@ a {
   transform: translate(-50%, -50%);
   content: "";
 }
-.footer__policy {
+.footer__copy {
   text-align: center;
   margin-top: 89px;
 }
-.footer__policy-desc {
-  display: block;
+.footer__copy-desc {
+  display: flex;
+  justify-content: center;
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
   color: #222;
 }
+.footer__policy-link {
+  position: relative;
+  margin-left: 10px;
+}
+.footer__policy-link::before {
+  position: absolute;
+  top: 0;
+  left: -6px;
+  content: "|";
+}
 .footer__sns {
   display: inline-block;
   text-align: center;
-  margin-top: 26px;
+  margin-top: 20px;
 }
 .footer__sns-item {
   display: inline-block;
   text-align: center;
 }
 .footer__sns-item + .footer__sns-item {
-  margin-left: 23px;
+  margin-left: 11px;
 }
-
+.footer__sns-link {
+  display: inline-block;
+  padding: 6px;
+}
 .sns__icon--facebook {
   width: 9px;
   height: 15px;
@@ -1017,7 +1026,7 @@ a {
   .footer__input {
     margin-top: 14px;
   }
-  .footer__policy {
+  .footer__copy {
     margin-top: 64px;
   }
   /* footer */
