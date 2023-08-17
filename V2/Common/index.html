@@ -2,19 +2,20 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Common</title>
-  <link rel="stylesheet" href="./css/styles.css"/>
+  <link rel="stylesheet" href="./css/styles.css">
   <style>
-    .wrap{max-width:974px;margin:0 auto;padding:0 60px}
-    .ui_title{margin:40px 44px;display:inline-block;padding-left:10px;border-left:4px solid var(--primary);font-family:Satoshi;font-size:36px;font-weight:400;line-height:49px;color:var(--dark-primary)}
+    .wrap{max-width:974px;margin:0 auto;padding:60px 60px}
+    .ui_heading{display: inline-block;font-size: 38px;line-height: 1;}
+    .ui_title{display:inline-block;margin:40px 44px;padding-left:10px;border-left:4px solid var(--primary);font-family:Satoshi;font-size:36px;font-weight:400;line-height:49px;color:var(--dark-primary)}
     .ui_content{padding:56px;border-radius:4px;background-color:var(--white)}
     .ui_color_list{display:block;font-size:0}
     .ui_color_item{display:inline-block;width:115px}
     .ui_color_item + .ui_color_item{margin-left:34px}
     .ui_item_title {display: inline-block;margin-bottom: 16px;font-size: 20px;line-height: 20px;}
-    .ui_table{width:100%;border-spacing:0}
+    .ui_table{width:100%;min-width:500px;border-spacing:0}
     .ui_table thead{height:48px;background-color:var(--light-gray)}
     .ui_table thead tr th{padding:6px 10px;font-family:Satoshi;font-size:16px;font-weight:400;line-height:22px;text-align:left}
     .ui_table thead tr th:nth-child(3),.ui_table thead tr th:last-child{text-align:center}
@@ -23,7 +24,8 @@
     .ui_table .table__line td{border-bottom:1px solid var(--primary)}
     .ui_table tbody tr td:nth-child(2){text-align:left}
     .ui_table tbody tr td:nth-child(3),.ui_table tbody tr td:nth-child(4){text-align:center}
-    .ui_buttonmd,.ui_buttonsm,.ui_other{background-color:#cbcbcb;font-family:Satoshi;font-size:0}
+    .ui_buttonmd,.ui_buttonsm,.ui_other{background-color:#cbcbcb;font-size:0}
+    .ui_item{overflow-x:auto}
     .ui_buttonmd .ui_item{display:block}
     .ui_buttonmd_title{display:inline-block;margin-bottom:16px;font-size:20px;line-height:20px}
     .ui_item + .ui_item{margin-top:40px}
@@ -45,6 +47,7 @@
 
 <body>
   <div class="wrap">
+    <h1 class="ui_heading">Common</h1>
     <!-- [D] Colors -->
     <section class="ui_section">
       <h2 class="ui_title">Colors</h2>
@@ -121,10 +124,10 @@
       <div class="ui_content ui_typography">
         <table class="ui_table">
           <colgroup>
-            <col style="width: 49.004%"/>
-            <col style="width: 15.537%"/>
-            <col style="width: 14.143%"/>
-            <col style="width: 21.414%"/>
+            <col style="width: 49.004%">
+            <col style="width: 15.537%">
+            <col style="width: 14.143%">
+            <col style="width: 21.414%">
           </colgroup>
           <thead>
             <tr>
@@ -221,9 +224,9 @@
           <h3 class="ui_item_title">&#35; Button Default</h3>
           <table class="ui_table ui_table_btn">
             <colgroup>
-              <col style="width: 33.3333333%"/>
-              <col style="width: 33.3333333%"/>
-              <col style="width: 33.3333333%"/>
+              <col style="width: 33.3333333%">
+              <col style="width: 33.3333333%">
+              <col style="width: 33.3333333%">
             </colgroup>
             <thead>
               <tr>
@@ -265,9 +268,9 @@
           <h3 class="ui_item_title">&#35; Button Icon</h3>
           <table class="ui_table ui_table_btn">
             <colgroup>
-              <col style="width: 33.3333333%"/>
-              <col style="width: 33.3333333%"/>
-              <col style="width: 33.3333333%"/>
+              <col style="width: 33.3333333%">
+              <col style="width: 33.3333333%">
+              <col style="width: 33.3333333%">
             </colgroup>
             <thead>
               <tr>
@@ -317,9 +320,9 @@
           <h3 class="ui_item_title">&#35; Button Default</h3>
           <table class="ui_table ui_table_btn">
             <colgroup>
-              <col style="width: 33.3333333%"/>
-              <col style="width: 33.3333333%"/>
-              <col style="width: 33.3333333%"/>
+              <col style="width: 33.3333333%">
+              <col style="width: 33.3333333%">
+              <col style="width: 33.3333333%">
             </colgroup>
             <thead>
               <tr>
@@ -361,9 +364,9 @@
           <h3 class="ui_item_title">&#35; Button Icon</h3>
           <table class="ui_table ui_table_btn">
             <colgroup>
-              <col style="width: 33.3333333%"/>
-              <col style="width: 33.3333333%"/>
-              <col style="width: 33.3333333%"/>
+              <col style="width: 33.3333333%">
+              <col style="width: 33.3333333%">
+              <col style="width: 33.3333333%">
             </colgroup>
             <thead>
               <tr>
@@ -414,24 +417,26 @@
     <section class="ui_section">
       <h2 class="ui_title">Product Card</h2>
       <div class="ui_content ui_product">
-        <div class="product_item">
-          <div class="thumb">
-            <img src="img/img_chair.png" alt="chair" class="img">
-          </div>
-          <div class="info">
-            <h4 class="info_title">The Dandy chair</h4>
-            <span class="info_price">&#163;250</span>
-          </div>
-        </div>
-        <div class="product_item">
-          <div class="thumb">
-            <img src="img/img_sofa.png" alt="sofa" class="img">
-          </div>
-          <div class="info">
-            <h4 class="info_title">The Poplar suede sofa</h4>
-            <span class="info_price">&#163;980</span>
-          </div>
-        </div>
+        <ul class="product_list">
+          <li class="product_item">
+            <div class="thumb thumb_img_4x5">
+              <img src="img/img_chair.png" alt="" class="img">
+            </div>
+            <div class="info">
+              <h4 class="info_title">The Dandy chair</h4>
+              <span class="info_price">&#163;250</span>
+            </div>
+          </li>
+          <li class="product_item">
+            <div class="thumb thumb_img_5x3">
+              <img src="img/img_sofa.png" alt="" class="img">
+            </div>
+            <div class="info">
+              <h4 class="info_title">The Poplar suede sofa</h4>
+              <span class="info_price">&#163;980</span>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
     <!--// [D] Product Card -->
@@ -443,62 +448,62 @@
         <!-- [D] Text input -->
         <div class="ui_item">
           <h3 class="ui_item_title">&#35; Text input</h3>
-          <div class="ui_other_input">
-            <div class="ui_other_item">
+          <ul class="ui_other_input">
+            <li class="ui_other_item">
               <form action="#" class="form">
                 <input type="email" id="email" name="email" placeholder="your@email.com" class="input input_white">
                 <input type="submit" value="Sign up" class="submit submit_dark">
               </form>
-            </div>
-            <div class="ui_other_item">
+            </li>
+            <li class="ui_other_item">
               <form action="#" class="form">
                 <input type="email" id="email2" name="email" placeholder="your@email.com" class="input input_transparent">
                 <input type="submit" value="Sign up" class="submit submit_white">
               </form>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
         <!--// [D] Text input -->
 
         <!-- [D] Stepper -->
         <div class="ui_item">
           <h3 class="ui_item_title">&#35; Stepper</h3>
-          <div class="ui_other_stepper">
-            <div class="ui_other_item">
+          <ul class="ui_other_stepper">
+            <li class="ui_other_item">
               <div class="steps steps_white">
                 <span class="down">&#45;</span>
                 <input type="text" value="1">
                 <span class="up">&#43;</span>
               </div>
-            </div>
-            <div class="ui_other_item">
+            </li>
+            <li class="ui_other_item">
               <div class="steps steps_gray">
                 <span class="down">&#45;</span>
                 <input type="text" value="1">
                 <span class="up">&#43;</span>
               </div>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
         <!--// [D] Stepper -->
 
         <!-- [D] Checkbox -->
         <div class="ui_item">
           <h3 class="ui_item_title">&#35; Checkbox</h3>
-          <div class="ui_other_stepper">
-            <div class="ui_other_item">
+          <ul class="ui_other_stepper">
+            <li class="ui_other_item">
               <div class="checkbox">
                 <input type="checkbox" id="vehicle1" name="vehicle1" value="Furniture" class="checkbox_input">
                 <label for="vehicle1">Furniture</label>
               </div>
-            </div>
-            <div class="ui_other_item">
+            </li>
+            <li class="ui_other_item">
               <div class="checkbox">
                 <input type="checkbox" id="vehicle2" name="vehicle2" value="Homeware" checked="checked" class="checkbox_input">
                 <label for="vehicle2">Homeware</label>
               </div>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
         <!--// [D] Checkbox -->
 
