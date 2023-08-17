@@ -1,3 +1,110 @@
+@charset "UTF-8";
+/* common */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+table,
+th,
+td,
+form,
+fieldset,
+legend,
+textarea,
+input,
+select,
+textarea,
+button,
+article,
+aside,
+dialog,
+footer,
+header,
+section,
+footer,
+nav,
+figure,
+main {
+  margin: 0;
+  padding: 0;
+  font-family: ClashDisplay;
+}
+
+html,
+body {
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+}
+
+/* for mobile */
+body,
+input,
+select,
+textarea,
+button {
+  font-family: Satoshi;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input,
+button,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+/* input내 clear 버튼 제거 : IE10+ */
+img,
+fieldset {
+  border: 0;
+  vertical-align: top;
+}
+
+em,
+address {
+  font-style: normal;
+}
+
+.blind,
+caption span,
+legend {
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  clip: rect(0, 0, 0, 0);
+}
+
 @font-face {
   font-family: "ClashDisplay";
   font-weight: 400;
@@ -10,49 +117,6 @@
   font-style: normal;
   src: url(/font/Satoshi-Regular.woff) format("woff");
 }
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-li,
-a,
-button {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font-family: ClashDisplay;
-}
-
-body {
-  background-color: #f5f5f5;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-button {
-  background: transparent;
-}
-
-a {
-  color: #000;
-  text-decoration: none;
-}
-
 :root {
   --dark-primary: #2a254b;
   --dark-primary-hover: #1E193E;
@@ -65,14 +129,8 @@ a {
   --bg-dark-hover: rgba(249, 249, 249, 0.3);
 }
 
-.blind {
-  overflow: hidden;
-  position: absolute;
-  padding: 0 !important;
-  width: 1px !important;
-  height: 1px !important;
-  line-height: 1px !important;
-  clip: rect(1px, 1px, 1px, 1px);
+body {
+  background-color: #f5f5f5;
 }
 
 /* <!-- [D] Typography --> */
@@ -128,7 +186,6 @@ a {
 .btn {
   display: inline-flex;
   align-items: center;
-  font-family: Satoshi;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -236,26 +293,24 @@ a {
   font-size: 0;
 }
 .product_item:nth-child(even) {
-  display: inline-block;
   width: calc(70% - 20px);
   margin-left: 20px;
 }
 .product_item:nth-child(-n+2) {
   margin-top: 0;
 }
-.product_item:nth-child(even) .thumb {
-  position: relative;
-  padding-top: 59.22%;
-  overflow: hidden;
-}
 
 .thumb {
   position: relative;
-  padding-top: 134%;
   overflow: hidden;
 }
-
-.img {
+.thumb_img_4x5 {
+  padding-top: 134%;
+}
+.thumb_img_5x3 {
+  padding-top: 59.237%;
+}
+.thumb .img {
   display: inline-block;
   position: absolute;
   top: 0;
@@ -286,18 +341,19 @@ a {
 
 input {
   border: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
   outline: none;
 }
 
 ::-moz-placeholder {
-  font-family: Satoshi;
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
 }
 
 ::placeholder {
-  font-family: Satoshi;
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
@@ -341,10 +397,6 @@ input {
   width: 118px;
   height: 56px;
   padding: 16px 32px;
-  font-family: Satoshi;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
   vertical-align: bottom;
   cursor: pointer;
 }
@@ -372,16 +424,13 @@ input {
 .steps_gray, .steps_gray input {
   background-color: var(--light-gray);
 }
-.steps span,
-.steps input {
+.steps span {
   display: inline-block;
+  padding: 0 8px;
   font-family: Satoshi;
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
-}
-.steps span {
-  padding: 0 8px;
   color: var(--border-gray);
   cursor: pointer;
   -webkit-user-select: none;
@@ -393,6 +442,10 @@ input {
   text-align: center;
 }
 
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+}
 .checkbox input[type=checkbox] {
   accent-color: var(--dark-primary);
 }
@@ -400,14 +453,16 @@ input {
   display: inline-block;
   width: 16px;
   height: 16px;
+  -webkit-appearance: checkbox;
+     -moz-appearance: checkbox;
+          appearance: checkbox;
 }
 .checkbox label {
+  display: inline-block;
   padding-left: 12px;
-  font-family: Satoshi;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
-  vertical-align: bottom;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
