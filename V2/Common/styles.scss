@@ -120,19 +120,30 @@ legend {
 }
 
 :root {
-  --dark-primary: #2a254b;
-  --dark-primary-hover: #1E193E;
+  --dark_primary: #2a254b;
+  --dark_primary_hover: #1E193E;
   --primary: #4e4d93;
-  --light-gray: #f9f9f9;
-  --border-gray: #ebe8f4;
+  --light_gray: #f9f9f9;
+  --border_gray: #ebe8f4;
   --white: #fff;
-  --border-dark: #cac6da;
-  --bg-dark: rgba(249, 249, 249, 0.15);
-  --bg-dark-hover: rgba(249, 249, 249, 0.3);
+  --border_dark: #cac6da;
+  --bg_dark: rgba(249, 249, 249, 0.15);
+  --bg_dark_hover: rgba(249, 249, 249, 0.3);
 }
 
-$border-gray: 1px solid var(--border-gray);
+$border-gray: 1px solid var(--border_gray);
 $border-primary: 2px solid var(--primary);
+
+@mixin custom-font($fontsize, $fontweight, $lineheight) {
+  font-size: $fontsize;
+  font-weight: $fontweight;
+  line-height: $lineheight;
+}
+
+@mixin custom-dimensions($width, $height) {
+  width: $width;
+  height: $height;
+}
 
 body {
   background-color: #f5f5f5;
@@ -141,59 +152,41 @@ body {
 /* <!-- [D] Typography --> */
 .heading {
   &_one {
-    font-size: 36px;
-    font-weight: 400;
-    line-height: 50px;
+    @include custom-font(36px, 400, 50px);
   }
 
   &_two {
-    font-size: 32px;
-    font-weight: 400;
-    line-height: 45px;
+    @include custom-font(32px, 400, 45px);
   }
 
   &_three {
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 34px;
+    @include custom-font(24px, 400, 34px);
   }
 
   &_four {
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 28px;
+    @include custom-font(20px, 400, 28px);
   }
 
   &_five {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 22px;
+    @include custom-font(16px, 400, 22px);
   }
 
   &_six {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
+    @include custom-font(14px, 400, 20px);
   }
 }
 
 .body {
   &_sm {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 21px;
+    @include custom-font(14px, 400, 21px);
   }
 
   &_md {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
+    @include custom-font(16px, 400, 24px);
   }
 
   &_lg {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 27px;
+    @include custom-font(18px, 400, 27px);
   }
 }
 
@@ -203,9 +196,9 @@ body {
 .btn {
   display: inline-flex;
   align-items: center;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
+  
+  @include custom-font(16px, 400, 24px);
+
   box-sizing: border-box;
   transition: background-color 0.3s ease-out;
   cursor: pointer;
@@ -227,8 +220,8 @@ body {
 
 .ico {
   display: inline-block;
-  width: 16px;
-  height: 16px;
+  @include custom-dimensions(16px, 16px);
+
   margin-left: 12px;
 
   &_downwhite {
@@ -243,10 +236,10 @@ body {
 /* <!-- [D] White --> */
 .btn_white {
   background-color: var(--white);
-  color: var(--dark-primary);
+  color: var(--dark_primary);
 
   &:hover {
-    background-color: var(--light-gray);
+    background-color: var(--light_gray);
 
   }
 
@@ -259,11 +252,11 @@ body {
 
 /* <!-- [D] Secondary --> */
 .btn_secondary {
-  background-color: var(--light-gray);
-  color: var(--dark-primary);
+  background-color: var(--light_gray);
+  color: var(--dark_primary);
 
   &:hover {
-    background-color: var(--border-gray);
+    background-color: var(--border_gray);
 
   }
 
@@ -276,11 +269,11 @@ body {
 
 /* <!-- [D] Primary --> */
 .btn_primary {
-  background-color: var(--dark-primary);
+  background-color: var(--dark_primary);
   color: var(--white);
 
   &:hover {
-    background-color: var(--dark-primary-hover);
+    background-color: var(--dark_primary_hover);
   }
 
   &:focus {
@@ -292,11 +285,11 @@ body {
 
 /* <!-- [D] Opaque --> */
 .btn_opaque {
-  background-color: var(--bg-dark);
+  background-color: var(--bg_dark);
   color: var(--white);
 
   &:hover {
-    background: var(--bg-dark-hover);
+    background: var(--bg_dark_hover);
   }
 
   &:focus {
@@ -309,10 +302,10 @@ body {
 /* <!-- [D] Ghost --> */
 .btn_ghost {
   background-color: transparent;
-  color: var(--dark-primary);
+  color: var(--dark_primary);
 
   &:hover {
-    background: var(--border-gray);
+    background: var(--border_gray);
   }
 
   &:focus {
@@ -357,27 +350,25 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+
+    @include custom-dimensions(100%, 100%);
+
     object-fit: cover;
   }
 }
 
-
 .info {
   &_title {
     margin-top: 24px;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 28px;
+
+    @include custom-font(20px, 400, 28px);
   }
 
   &_price {
     margin-top: 8px;
     font-family: Satoshi;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 27px;
+
+    @include custom-font(18px, 400, 27px);
   }
 }
 
@@ -391,29 +382,24 @@ body {
 
 input {
   border: none;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 22px;
   outline: none;
 }
 
+input,
 ::placeholder {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 22px;
+  @include custom-font(16px, 400, 22px);
 }
 
 .input {
-  width: 354px;
-  height: 56px;
-  padding: 0px 32px;
+  @include custom-dimensions(354px, 56px);
 
+  padding: 0px 32px;
 
   &_white {
     background-color: var(--white);
 
     &::placeholder {
-      color: var(--border-dark);
+      color: var(--border_dark);
       user-select: none;
     }
   }
@@ -429,20 +415,20 @@ input {
 }
 
 .submit {
-  width: 118px;
-  height: 56px;
+  @include custom-dimensions(118px, 56px);
+
   padding: 16px 32px;
   vertical-align: bottom;
   cursor: pointer;
 
   &_dark {
-    background-color: var(--dark-primary);
+    background-color: var(--dark_primary);
     color: var(--white);
   }
 
   &_white {
     background-color: var(--white);
-    color: var(--dark-primary);
+    color: var(--dark_primary);
   }
 }
 
@@ -453,8 +439,9 @@ input {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 122px;
-  height: 46px;
+
+  @include custom-dimensions(122px, 46px);
+
   padding: 12px 16px;
   box-sizing: border-box;
 
@@ -464,17 +451,17 @@ input {
 
   &_gray,
   &_gray input {
-    background-color: var(--light-gray);
+    background-color: var(--light_gray);
   }
 
   span {
     display: inline-block;
     padding: 0 8px;
     font-family: Satoshi;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 22px;
-    color: var(--border-gray);
+
+    @include custom-font(16px, 400, 22px);
+
+    color: var(--border_gray);
     cursor: pointer;
     user-select: none;
   }
@@ -494,22 +481,23 @@ input {
   align-items: center;
 
   input[type=checkbox] {
-    accent-color: var(--dark-primary);
+    accent-color: var(--dark_primary);
   }
 
   &_input {
     display: inline-block;
-    width: 16px;
-    height: 16px;
+
+    @include custom-dimensions(16px, 16px);
+
     appearance: checkbox;
   }
 
   label {
     display: inline-block;
     padding-left: 12px;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
+
+    @include custom-font(16px, 400, 24px);
+
     user-select: none;
     cursor: pointer;
   }
@@ -519,37 +507,39 @@ input {
 
 // <!-- [D] Feature Card -->
 .feature {
-  width: 305px;
-  height: 244px;
+  @include custom-dimensions(305px, 244px);
+
   padding: 48px;
-  background-color: var(--light-gray);
+  background-color: var(--light_gray);
   box-sizing: border-box;
 
   &_title {
     display: block;
     margin-top: 12px;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 28px;
-    color: var(--dark-primary);
+
+    @include custom-font(20px, 400, 28px);
+
+    color: var(--dark_primary);
   }
 
   &_disc {
     margin-top: 12px;
     font-family: Satoshi;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    color: var(--dark-primary);
+
+    @include custom-font(16px, 400, 24px);
+
+    color: var(--dark_primary);
   }
 }
 
 .ico_car {
   display: inline-block;
-  width: 24px;
-  height: 24px;
+
+  @include custom-dimensions(24px, 24px);
+
   background: url(/img/ico_car.png) center no-repeat;
 }
 
 // <!--// [D] Feature Card -->
 // <!--// [D] Other -->
+
