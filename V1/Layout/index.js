@@ -1,10 +1,10 @@
 $(document).ready(function () {
   function toggleNavBar() {
+    $(".nav").slideToggle();
     if ($(this).hasClass("btn__navbar-on")) {
-      $(".nav").addClass("is-on");
       $(this).removeClass("btn__navbar-on").addClass("btn__navbar-off");
     } else {
-      $(".nav").removeClass("is-on");
+      // $(".nav").removeClass("is-on");
       $(this).removeClass("btn__navbar-off").addClass("btn__navbar-on");
     }
   }
