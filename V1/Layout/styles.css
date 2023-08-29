@@ -102,16 +102,12 @@ a {
   object-fit: cover;
 }
 .title__name {
-  display: -webkit-box;
+  display: block;
   overflow: hidden;
   font-size: 21px;
   font-weight: 600;
   line-height: 25px;
   color: #222;
-  text-overflow: ellipsis;
-  white-space: wrap;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
 }
 .section {
   margin-top: 64px;
@@ -185,11 +181,13 @@ a {
 .nav__item--heart .nav__link:hover .icon--heart {
   background-position: -12px -2px;
 }
-
+.nav__link {
+  display: inline-block;
+}
 .nav__link,
 .nav__item--search,
 .parent__title {
-  padding: 8px;
+  padding: 8px 8px 5px;
   cursor: pointer;
 }
 
@@ -828,9 +826,6 @@ a {
 }
 
 @media screen and (max-width: 768px) {
-  .nav.is-on {
-    display: block;
-  }
   .only-pc {
     display: none;
   }
@@ -1009,7 +1004,7 @@ a {
   .posts__link {
     margin-top: 12px;
   }
-  .post__list-link{
+  .post__list-link {
     margin-top: 39px;
   }
   /* Latest Posts */
