@@ -122,7 +122,7 @@ a {
   margin-top: 25px;
   font-size: 0;
 }
-/*// general */
+/* general */
 .wrap {
   max-width: 1440px;
   margin: 0 auto;
@@ -385,7 +385,7 @@ a {
   height: 24px;
   background-position: -60px -2px;
 }
-/*// audio */
+/* audio */
 
 /* episodes */
 .episodes {
@@ -454,28 +454,31 @@ a {
   -webkit-box-orient: vertical;
 }
 .episodes__btn {
-  display: inline-flex;
-  align-items: center;
+  display: inline-block;
+  position: relative;
   margin-top: 16px;
   cursor: pointer;
 }
-
-.icon--playlisten {
+.episodes__btn::before{
+  position: absolute;
   width: 24px;
   height: 24px;
+  background-image: url(img/list_channel.png);
   background-position: -84px -2px;
-}
+  content: '';
+} 
+
 .btn-title {
   display: inline-block;
-  margin-left: 10px;
+  padding-left: 34px;
   font-size: 12px;
   font-weight: 600;
-  line-height: 15px;
+  line-height: 24px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: #7247ca;
 }
-/*// episodes */
+/* episodes */
 
 /* pagination */
 .pagination {
@@ -512,7 +515,7 @@ a {
   height: 10px;
   background-position: -55px -2px;
 }
-/*// pagination */
+/* pagination */
 
 /* member */
 .member {
@@ -607,7 +610,7 @@ a {
   height: 12px;
   background-position: -32px -2px;
 }
-/*// member */
+/* member */
 
 /* posts */
 .section--posts {
@@ -640,16 +643,16 @@ a {
   margin-top: 16px;
   font-size: 14px;
   font-weight: 400;
-  line-height: 18px;
   color: #979797;
+  line-height: 18px;
 }
 .posts__link {
   display: inline-block;
   margin-top: 35px;
   padding: 4px;
-  color: #7247ca;
   font-size: 14px;
   font-weight: 600;
+  color: #7247ca;
   line-height: 25px;
 }
 
@@ -662,8 +665,8 @@ a {
   background-color: #f5f5f7;
   font-size: 14px;
   font-weight: 400;
-  line-height: 18px;
   color: #7247ca;
+  line-height: 18px;
 }
 .post__list-link::after {
   position: absolute;
@@ -675,7 +678,7 @@ a {
   transform: translateY(-50%);
   content: "";
 }
-/*// posts */
+/* posts */
 
 /* footer */
 .footer {
@@ -694,8 +697,8 @@ a {
 .footer__nav-link {
   font-size: 14px;
   font-weight: 600;
-  line-height: 25px;
   color: #555;
+  line-height: 25px;
 }
 .footer__nav-item + .footer__nav-item {
   margin-top: 9px;
@@ -707,16 +710,16 @@ a {
   font-weight: 600;
   line-height: 20px;
   letter-spacing: 0.16em;
-  text-transform: uppercase;
   color: #222;
+  text-transform: uppercase;
 }
 .footer__desc {
   display: inline-block;
   margin-top: 8px;
   font-size: 12px;
   font-weight: 400;
-  line-height: 15px;
   color: #555;
+  line-height: 15px;
 }
 .footer__input {
   position: relative;
@@ -735,8 +738,8 @@ a {
 ::placeholder {
   font-size: 12px;
   font-weight: 400;
-  line-height: 15px;
   color: #555;
+  line-height: 15px;
 }
 .btn-send {
   position: absolute;
@@ -781,6 +784,7 @@ a {
   position: absolute;
   top: 0;
   left: -6px;
+  pointer-events: none;
   content: "|";
 }
 .footer__sns {
@@ -816,7 +820,7 @@ a {
   height: 15px;
   background-position: -77px -2px;
 }
-/*// footer */
+/* footer */
 
 @media screen and (max-width: 1024px) {
   .header {
@@ -836,7 +840,7 @@ a {
   .header {
     flex-wrap: wrap;
     height: 100%;
-    padding: 16px 16px;
+    padding: 16px 16px 16px 6px;
   }
 
   .logo {
@@ -932,7 +936,7 @@ a {
     padding: 0 16px;
   }
   .container {
-    margin: 65px auto 0;
+    margin: 46px auto 0;
     border-bottom: 1px solid#EAEAEE;
   }
   .player__progress {
@@ -957,14 +961,13 @@ a {
     max-height: 75px;
     white-space: wrap;
   }
-  .episodes__status {
-    margin-right: 10px;
-    padding: 6px 7px;
-  }
   .episodes__desc {
     max-height: 75px;
     margin-top: 10px;
     white-space: wrap;
+  }
+  .episodes__status ~ .episodes__category{
+    margin-left: 12px;
   }
   .episodes__item + .episodes__item,
   .pagination {
