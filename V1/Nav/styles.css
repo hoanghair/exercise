@@ -109,12 +109,13 @@ input {
   margin-left: 26px;
 }
 .nav__link {
+  display: inline-block;
   padding: 5px 10px;
   color: #274c5b;
-  cursor: pointer;
   font-weight: 700;
   line-height: 23px;
   font-size: 20px;
+  cursor: pointer;
 }
 .nav__item--pages {
   display: flex;
@@ -160,6 +161,7 @@ input {
   top: 50%;
   right: 6px;
   transform: translateY(-50%);
+  cursor: pointer;
 }
 .cart {
   display: flex;
@@ -170,6 +172,10 @@ input {
   border: 1px solid #e0e0e0;
   border-radius: 45px;
   box-sizing: border-box;
+}
+
+.cart button {
+  cursor: pointer;
 }
 
 .cart__number {
@@ -188,7 +194,6 @@ input {
   height: 56px;
   background-image: url("img/list-icon.png");
   background-repeat: no-repeat;
-  cursor: pointer;
 }
 
 .icon--search {

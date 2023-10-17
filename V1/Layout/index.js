@@ -1,6 +1,6 @@
 $(document).ready(function () {
   function toggleNavBar() {
-    $(".nav").slideToggle();
+    $(".nav").stop().slideToggle();
     if ($(this).hasClass("btn__navbar-on")) {
       $(this).removeClass("btn__navbar-on").addClass("btn__navbar-off");
     } else {

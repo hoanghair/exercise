@@ -1,4 +1,4 @@
-@charset "utf-8";
+@charset 'utf-8';
 
 /* common */
 body,
@@ -106,17 +106,17 @@ legend {
 }
 
 @font-face {
-  font-family: "ClashDisplay";
+  font-family: 'ClashDisplay';
   font-weight: 400;
   font-style: normal;
-  src: url(/font/ClashDisplay-Regular.woff) format("woff");
+  src: url(/font/ClashDisplay-Regular.woff) format('woff');
 }
 
 @font-face {
-  font-family: "Satoshi";
+  font-family: 'Satoshi';
   font-weight: 400;
   font-style: normal;
-  src: url(/font/Satoshi-Regular.woff) format("woff");
+  src: url(/font/Satoshi-Regular.woff) format('woff');
 }
 
 :root {
@@ -150,43 +150,43 @@ body {
 }
 
 /* <!-- [D] Typography --> */
-.heading {
-  &_one {
-    @include custom-font(36px, 400, 50px);
+.header {
+  &_xlarge {
+    @include custom-font(36px, 400, 1.5);
   }
 
-  &_two {
-    @include custom-font(32px, 400, 45px);
+  &_large {
+    @include custom-font(32px, 400, 1.5);
   }
 
-  &_three {
-    @include custom-font(24px, 400, 34px);
+  &_medium {
+    @include custom-font(24px, 400, 1.5);
   }
 
-  &_four {
-    @include custom-font(20px, 400, 28px);
+  &_small {
+    @include custom-font(20px, 400, 1.5);
   }
 
-  &_five {
-    @include custom-font(16px, 400, 22px);
+  &_xsmall {
+    @include custom-font(16px, 400, 1.5);
   }
 
-  &_six {
-    @include custom-font(14px, 400, 20px);
+  &_xxsmall {
+    @include custom-font(14px, 400, 1.5);
   }
 }
 
 .body {
-  &_sm {
-    @include custom-font(14px, 400, 21px);
+  &_small {
+    @include custom-font(14px, 400, 1.5);
   }
 
-  &_md {
-    @include custom-font(16px, 400, 24px);
+  &_medium {
+    @include custom-font(16px, 400, 1.5);
   }
 
-  &_lg {
-    @include custom-font(18px, 400, 27px);
+  &_large {
+    @include custom-font(18px, 400, 1.5);
   }
 }
 
@@ -194,34 +194,35 @@ body {
 
 /* <!-- [D] Button --> */
 .btn {
-  display: inline-flex;
-  align-items: center;
-  
+  display: inline-block;
   @include custom-font(16px, 400, 24px);
-
   box-sizing: border-box;
   transition: background-color 0.3s ease-out;
   cursor: pointer;
   user-select: none;
 
-  &.is_disabled {
+  &:disabled {
     opacity: 50%;
     pointer-events: none;
   }
 
-  &_md {
+  &_medium {
     padding: 16px 32px;
   }
 
-  &_sm {
+  &_small {
     padding: 12px 24px;
   }
+}
+
+.btn:has(.ico) {
+  display: inline-flex;
+  align-items: center;
 }
 
 .ico {
   display: inline-block;
   @include custom-dimensions(16px, 16px);
-
   margin-left: 12px;
 
   &_downwhite {
@@ -337,11 +338,11 @@ body {
   position: relative;
   overflow: hidden;
 
-  &_img_4x5 {
+  &_portrait {
     padding-top: 134%;
   }
 
-  &_img_5x3 {
+  &_landscape {
     padding-top: 59.237%;
   }
 
@@ -350,24 +351,21 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-
     @include custom-dimensions(100%, 100%);
-
     object-fit: cover;
   }
 }
 
 .info {
-  &_title {
-    margin-top: 24px;
+  margin-top: 24px;
 
+  &_title {
     @include custom-font(20px, 400, 28px);
   }
 
   &_price {
     margin-top: 8px;
     font-family: Satoshi;
-
     @include custom-font(18px, 400, 27px);
   }
 }
@@ -391,9 +389,8 @@ input,
 }
 
 .input {
-  @include custom-dimensions(354px, 56px);
-
-  padding: 0px 32px;
+  width: 354px;
+  padding: 17px 32px;
 
   &_white {
     background-color: var(--white);
@@ -415,9 +412,11 @@ input,
 }
 
 .submit {
+  display: inline-block;
   @include custom-dimensions(118px, 56px);
-
   padding: 16px 32px;
+  font-family: Satoshi;
+  @include custom-font(16px, 400, 24px);
   vertical-align: bottom;
   cursor: pointer;
 
@@ -439,9 +438,7 @@ input,
   display: inline-flex;
   justify-content: center;
   align-items: center;
-
   @include custom-dimensions(122px, 46px);
-
   padding: 12px 16px;
   box-sizing: border-box;
 
@@ -454,13 +451,11 @@ input,
     background-color: var(--light_gray);
   }
 
-  span {
+  button {
     display: inline-block;
     padding: 0 8px;
     font-family: Satoshi;
-
     @include custom-font(16px, 400, 22px);
-
     color: var(--border_gray);
     cursor: pointer;
     user-select: none;
@@ -470,45 +465,64 @@ input,
     width: 100%;
     text-align: center;
   }
-
 }
 
 // <!--// [D] Stepper -->
 
 // <!-- [D] Checkbox -->
-.checkbox {
-  display: inline-flex;
-  align-items: center;
-
-  input[type=checkbox] {
-    accent-color: var(--dark_primary);
+.input_select_box {
+  input[type='checkbox'] {
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    clip: rect(0, 0, 0, 0);
   }
 
-  &_input {
+  .lable_checkbox {
     display: inline-block;
-
-    @include custom-dimensions(16px, 16px);
-
-    appearance: checkbox;
-  }
-
-  label {
-    display: inline-block;
-    padding-left: 12px;
-
+    position: relative;
+    padding-left: 28px;
+    font-family: Satoshi;
     @include custom-font(16px, 400, 24px);
-
-    user-select: none;
     cursor: pointer;
+    user-select: none;
+  }
+
+  .input_checkbox+.lable_checkbox {
+    &::before {
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      background: url(/img/ico_nocheck.png) no-repeat;
+      transform: translateY(-50%);
+      content: '';
+    }
+  }
+
+  .input_checkbox:checked+.lable_checkbox {
+    &::before {
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      background: url(/img/ico_check.png) no-repeat;
+      transform: translateY(-50%);
+      content: '';
+    }
   }
 }
-
 // <!--// [D] Checkbox -->
 
 // <!-- [D] Feature Card -->
 .feature {
   @include custom-dimensions(305px, 244px);
-
   padding: 48px;
   background-color: var(--light_gray);
   box-sizing: border-box;
@@ -516,30 +530,23 @@ input,
   &_title {
     display: block;
     margin-top: 12px;
-
     @include custom-font(20px, 400, 28px);
-
     color: var(--dark_primary);
   }
 
   &_disc {
     margin-top: 12px;
     font-family: Satoshi;
-
     @include custom-font(16px, 400, 24px);
-
     color: var(--dark_primary);
   }
 }
 
 .ico_car {
   display: inline-block;
-
   @include custom-dimensions(24px, 24px);
-
   background: url(/img/ico_car.png) center no-repeat;
 }
 
 // <!--// [D] Feature Card -->
 // <!--// [D] Other -->
-

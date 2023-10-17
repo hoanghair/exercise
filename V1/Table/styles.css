@@ -169,7 +169,7 @@ thead th:nth-child(1) {
 }
 
 tbody tr:first-child td {
-  padding: 17px 18px 14px 18px;
+  padding-top: 17px;
 }
 
 tbody td {

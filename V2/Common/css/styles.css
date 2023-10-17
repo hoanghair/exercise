@@ -134,58 +134,57 @@ body {
 }
 
 /* <!-- [D] Typography --> */
-.heading_one {
+.header_xlarge {
   font-size: 36px;
   font-weight: 400;
-  line-height: 50px;
+  line-height: 1.5;
 }
-.heading_two {
+.header_large {
   font-size: 32px;
   font-weight: 400;
-  line-height: 45px;
+  line-height: 1.5;
 }
-.heading_three {
+.header_medium {
   font-size: 24px;
   font-weight: 400;
-  line-height: 34px;
+  line-height: 1.5;
 }
-.heading_four {
+.header_small {
   font-size: 20px;
   font-weight: 400;
-  line-height: 28px;
+  line-height: 1.5;
 }
-.heading_five {
+.header_xsmall {
   font-size: 16px;
   font-weight: 400;
-  line-height: 22px;
+  line-height: 1.5;
 }
-.heading_six {
+.header_xxsmall {
   font-size: 14px;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 1.5;
 }
 
-.body_sm {
+.body_small {
   font-size: 14px;
   font-weight: 400;
-  line-height: 21px;
+  line-height: 1.5;
 }
-.body_md {
+.body_medium {
   font-size: 16px;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 1.5;
 }
-.body_lg {
+.body_large {
   font-size: 18px;
   font-weight: 400;
-  line-height: 27px;
+  line-height: 1.5;
 }
 
 /* <!--// [D] Typography --> */
 /* <!-- [D] Button --> */
 .btn {
-  display: inline-flex;
-  align-items: center;
+  display: inline-block;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -196,15 +195,20 @@ body {
      -moz-user-select: none;
           user-select: none;
 }
-.btn.is_disabled {
+.btn:disabled {
   opacity: 50%;
   pointer-events: none;
 }
-.btn_md {
+.btn_medium {
   padding: 16px 32px;
 }
-.btn_sm {
+.btn_small {
   padding: 12px 24px;
+}
+
+.btn:has(.ico) {
+  display: inline-flex;
+  align-items: center;
 }
 
 .ico {
@@ -304,10 +308,10 @@ body {
   position: relative;
   overflow: hidden;
 }
-.thumb_img_4x5 {
+.thumb_portrait {
   padding-top: 134%;
 }
-.thumb_img_5x3 {
+.thumb_landscape {
   padding-top: 59.237%;
 }
 .thumb .img {
@@ -321,8 +325,10 @@ body {
      object-fit: cover;
 }
 
-.info_title {
+.info {
   margin-top: 24px;
+}
+.info_title {
   font-size: 20px;
   font-weight: 400;
   line-height: 28px;
@@ -359,8 +365,7 @@ input,
 
 .input {
   width: 354px;
-  height: 56px;
-  padding: 0px 32px;
+  padding: 17px 32px;
 }
 .input_white {
   background-color: var(--white);
@@ -392,9 +397,14 @@ input,
 }
 
 .submit {
+  display: inline-block;
   width: 118px;
   height: 56px;
   padding: 16px 32px;
+  font-family: Satoshi;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
   vertical-align: bottom;
   cursor: pointer;
 }
@@ -422,7 +432,7 @@ input,
 .steps_gray, .steps_gray input {
   background-color: var(--light_gray);
 }
-.steps span {
+.steps button {
   display: inline-block;
   padding: 0 8px;
   font-family: Satoshi;
@@ -440,31 +450,48 @@ input,
   text-align: center;
 }
 
-.checkbox {
-  display: inline-flex;
-  align-items: center;
+.input_select_box input[type=checkbox] {
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0, 0, 0, 0);
 }
-.checkbox input[type=checkbox] {
-  accent-color: var(--dark_primary);
-}
-.checkbox_input {
+.input_select_box .lable_checkbox {
   display: inline-block;
-  width: 16px;
-  height: 16px;
-  -webkit-appearance: checkbox;
-     -moz-appearance: checkbox;
-          appearance: checkbox;
-}
-.checkbox label {
-  display: inline-block;
-  padding-left: 12px;
+  position: relative;
+  padding-left: 28px;
+  font-family: Satoshi;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
+  cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  cursor: pointer;
+}
+.input_select_box .input_checkbox + .lable_checkbox::before {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  background: url(/img/ico_nocheck.png) no-repeat;
+  transform: translateY(-50%);
+  content: "";
+}
+.input_select_box .input_checkbox:checked + .lable_checkbox::before {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  background: url(/img/ico_check.png) no-repeat;
+  transform: translateY(-50%);
+  content: "";
 }
 
 .feature {
