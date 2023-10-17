@@ -58,12 +58,16 @@ input {
 }
 
 .form__title {
-  display: flex;
+  display: block;
+  position: relative;
   font-size: 18px;
   font-weight: 700;
   line-height: 21px;
   color: #274c5b;
-  text-align: left;
+}
+.form__title::after{
+  position: absolute;
+  content: '*';
 }
 
 .form__item {
@@ -77,11 +81,10 @@ input {
 }
 
 .form__input {
-  display: flex;
+  display: block;
   width: 100%;
-  height: 80px;
   margin-top: 26px;
-  padding: 0 23px;
+  padding: 28px 23px;
   border: 1px solid #7eb693;
   border-radius: 16px;
   font-family: Roboto;
@@ -107,14 +110,15 @@ textarea {
   resize: none;
 }
 .form__submit {
-  width: 220px;
-  height: 80px;
+  display: inline-block;
+  padding: 28px 44px;
   margin-top: 60px;
   border-radius: 16px;
   background-color: #274c5b;
   font-family: Roboto;
   font-size: 20px;
   font-weight: 700;
+  line-height: 24px;
   color: #fff;
   cursor: pointer;
 }
@@ -137,8 +141,7 @@ textarea {
   }
 
   .form__input {
-    height: 60px;
-    padding: 0 12px;
+    padding: 18px 12px;
   }
 
   .form__input--message {
@@ -150,7 +153,6 @@ textarea {
     font-size: 16px;
   }
   .form__submit {
-    width: 200px;
-    height: 60px;
+    padding: 18px 34px;
   }
 }

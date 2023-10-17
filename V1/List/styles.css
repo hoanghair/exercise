@@ -165,23 +165,20 @@ ul {
   font-weight: 800;
   line-height: 29px;
   color: #274c5b;
-  text-align: left;
 }
 
 .member__desc {
   display: flex;
   justify-content: space-between;
-  align-items: end;
+  align-items: flex-end;
   margin-top: 2px;
 }
 
 .member__business {
   font-family: Yellowtail;
   font-size: 22px;
-  font-weight: 400;
   line-height: 30px;
   color: #7eb693;
-  text-align: left;
 }
 
 .member__sns {
